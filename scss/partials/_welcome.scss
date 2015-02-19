@@ -1,0 +1,143 @@
+.section-welcome{
+    color: white;
+    text-align: center;
+    background-size: cover;
+
+    .page-home .parallax-layer-background & {
+        background: url(../img/bg-welcome.png) 50% 0 no-repeat;
+     }
+    .page-games .parallax-layer-background & {
+        background: url(../img/games/welcome.jpg) 50% 0 no-repeat;
+     }
+    .page-dashboards .parallax-layer-background & {
+        background: url(../img/dashboards/welcome.jpg) 50% 0 no-repeat;
+     }
+    .page-dataviz .parallax-layer-background & {
+        background: url(../img/dataviz/welcome.jpg) 50% 0 no-repeat;
+     }
+
+    .page-home & {
+        .content{
+            padding: 150px 165px 0;
+            text-align: center;
+            @include breakpoint( tiny-bear ) {
+                padding: 30px;
+            }
+        }
+        h1{
+            font-size: 4em;
+            font-weight: $font-weight-bold;
+            letter-spacing: .1em;
+            line-height: 3em;
+        }
+        p{
+            font-size: 2.5em;
+            font-style: normal;
+            margin: 0;
+            font-weight: $font-weight-thin;
+        }
+        .welcome-animation{
+            @include breakpoint( baby-bear ){
+                display: none;
+            }
+            position: absolute;
+            left: -372px;
+            bottom: 0;
+            height: 689px;
+            overflow: hidden;
+            .welcome-phone{
+                animation: iphoneHand 2s 1 linear;
+            }
+            .welcome-screen{
+                position: absolute;
+                top: 70px;
+                left: 266px;
+                animation: iphoneScreen 2s 1 linear;
+            }
+        }
+        .scroll-indicator .arrow{
+            background: $teal;
+        }
+    }
+
+    .page-dashboards & {
+        .scroll-indicator .arrow{
+            background: $teal;
+        }
+    }
+
+    .page-dataviz & {
+        .scroll-indicator .arrow{
+            background: $peach;
+        }
+    }
+
+    .page-games & {
+        .scroll-indicator .arrow{
+            background: $slate;
+        }
+    }
+    .content{
+        padding: 150px 200px 0 0;
+        height: 100%;
+        text-align: right;
+        @include breakpoint( baby-bear ){
+            padding: 80px 25px 0;
+        }
+    }
+
+    h1{
+        font-weight: $font-weight-thin;
+        font-size: 5em;
+        margin: 0;
+        .fancy{
+            position: relative;
+            top: 20px;
+            font-size: 2em;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            font-family: 'NovitoNova', 'Lato', arial;
+        }
+    }
+
+    h2{
+        font-weight: $font-weight-heavy;
+        color: #cbcbcb;
+        text-transform: uppercase;
+    }
+
+    p{
+        font-weight: $font-weight-light;
+        font-style: italic;
+        font-size: 1.25em;
+        margin: 1em 0;
+    }
+
+    .divider {
+        margin: 2em 0;
+        span {
+           float: right;
+        }
+    }
+
+}
+
+@keyframes iphoneHand {
+  0%,
+  30% {
+    transform: translate3d( 0, 700px, 0 );
+  }
+  50%,
+  100% {
+    transform: translate3d( 0, 0, 0 );
+  }
+}
+@keyframes iphoneScreen {
+  0%,
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

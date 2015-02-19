@@ -1,0 +1,253 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #7f7f7f;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+a {
+	outline: none;
+	color: #fff;
+	font-weight: bold;
+}
+p {
+	color: #ccc;
+}
+#slotMachine {
+	position: absolute;
+    top: 0;
+    left: 0;
+	width: 770px;
+	height: 440px;
+	background: url(../images/outerFrame.png);
+    overflow: hidden;
+}
+.logoContainer {
+	position:absolute;
+	left: 275px;
+	top: 16px;
+}
+.soundcontrol {
+	position:absolute;
+	top:55px;
+	left:18px;
+	color:#fff;
+	font-size:18px;
+}
+.soundcontrol a{
+	text-decoration:none;
+	color:#000;
+}
+.soundon:hover {
+	color:#090;
+}
+.soundoff:hover {
+	color:#F00;
+}
+
+#slotSplash {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 770px;
+	height: 440px;
+	background: #000 url(../images/framebig.jpg);
+	z-index:20;
+}
+#showCredit p {
+	position:absolute;
+	right:144px;
+	top:-13px;
+	font-size:80px;
+	color:#fcf4d8;
+}
+p.txtGrad {
+	position:absolute;
+	font-family:Tahoma, Geneva, sans-serif;
+	text-shadow: 4px 4px #000000;
+}
+#slotSplash a {
+	font-size:0px;
+	width:82px;
+	height:78px;
+	display: block;
+	overflow: hidden;
+	left: 680px;
+	top: 350px;
+	position: absolute;
+	text-decoration:none;
+}
+#slotSplash a.soundon {
+	font-size:10px;
+	display: block;
+	overflow: hidden;
+	left: 0px;
+	top: 274px;
+	position: absolute;
+	background: url(../images/soundonoff.png);
+	height:26px;
+	width:50px;
+}
+#slotSplash a.soundoff {
+	font-size:10px;
+	display: block;
+	overflow: hidden;
+	left: 0px;
+	top: 274px;
+	position: absolute;
+	background: url(../images/soundonoff.png);
+	background-position:center bottom;
+	height:26px;
+	width:50px;
+}
+
+#statusMsg {
+	position:absolute;
+	top:124px;
+	left:224px;
+}
+#statusMsg img{
+	float:left;
+}
+.blinkLeft {
+	position:absolute;
+	background: url(../images/roundlightLeft.png);
+	height:205px;
+	width:43px;
+	left:16px;
+	top:182px;
+}
+.blinkLeft img{
+	position:absolute;
+	top:0px;
+	left:-1px;
+}
+
+.lights img {
+	display:none;
+}
+.blinkLeftBlinks {
+	position:absolute;
+	height:205px;
+	width:43px;
+	left:21px;
+	top:210px;
+}
+.blinkRight {
+	position:absolute;
+	background: url(../images/roundlightRight.png);
+	height:205px;
+	width:43px;
+	top:182px;
+	right:96px;
+}
+.blinkRightBlinks {
+	position:absolute;
+	height:205px;
+	width:49px;
+	top:210px;
+	right:101px;
+}
+#statusMsg h3 {
+	font-size:20px;
+	font-family:Georgia;
+	letter-spacing:3px;
+	color:#fffdd3;
+	float:left;
+}
+div.wheel {
+	position: absolute;
+	width: 170px;
+	height: 230px;
+	overflow: hidden;
+	top: 163px;
+	z-index:0;
+}
+div.wheel div {
+	position: absolute;
+	top: 60px;
+	left: 0px;
+	overflow:visible;
+}
+
+
+#wheelOverlay {
+	position: absolute;
+	top: 24px;
+	left: 14px;
+	border:1px solid #000000;
+}
+#wheel1 {
+	left: 81px;
+}
+#wheel2 {
+	left: 265px;
+}
+#wheel3 {
+	left: 441px;
+}
+#slotCredits {
+	position: absolute;
+	top: 6px;
+	left: 30px;
+	width: 80px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-align: right;
+	color: #78ff00;
+}
+#triggerContainer {
+	position:relative;
+	top: 67px;
+	height: 373px;
+	width:78px;
+	left: 692px;
+	z-index:2;
+	cursor:pointer;
+    overflow: hidden;
+}
+#leverStick {
+    display: block;
+    position: absolute;
+    height: 268px;
+	width:32px;
+    overflow: hidden;
+    top: 66px;
+    left: 27px;
+    background: url(../images/leverStick.png) bottom no-repeat;
+}
+#slotTrigger {
+    display: block;
+    position: absolute;
+    height: 63px;
+	width:63px;
+    overflow: hidden;
+    top: 9px;
+    left: 13px;
+    background: url(../images/leverball.png) left top no-repeat;
+}
+#stickHolder {
+    display: block;
+    position: absolute;
+    width: 73px;
+    height: 46px;
+    overflow: hidden;
+    bottom: 0;
+    right: 4px;
+	z-index:1;
+    cursor: default;
+    background: url(../images/leverHolder.png) bottom no-repeat;
+}
+
+#slotTrigger.slotTriggerDown {
+	background-position: -160px;
+}
+#slotTrigger.slotTriggerDisabled {
+	background-position: 0px;
+	display: none;
+}
+.slotSpinAnimation {
+	display: none;
+}

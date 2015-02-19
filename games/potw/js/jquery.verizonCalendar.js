@@ -1,0 +1,1 @@
+﻿alert('The jquery.verizonCalendar moved to portal_1a.js');

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Balloon Pop</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" href="css/balloon-pop.css">
+</head>
+<body>
+
+<div id="bpop-game-board">
+    <div id="bpop-title"></div>
+
+    <div id="cloud1"></div>
+    <div id="cloud2"></div>
+    <div id="cloud3"></div>
+    <div id="cloud4"></div>
+    <div id="cloud5"></div>
+
+    <div id="clouds-back"></div>
+    <div id="clouds-mid"></div>
+    <div id="clouds-fore"></div>
+
+    <div class="poppable yellow-balloon" id="balloon0"></div>
+    <div class="poppable blue-balloon" id="balloon1"></div>
+    <div class="poppable orange-balloon" id="balloon2"></div>
+    <div class="poppable green-balloon" id="balloon3"></div>
+    <div class="poppable purple-balloon" id="balloon4"></div>
+    <div class="poppable pink-balloon" id="balloon5"></div>
+    <div class="poppable red-balloon" id="balloon6"></div>
+    <div class="poppable yellow-balloon" id="balloon7"></div>
+    <div class="poppable pink-balloon" id="balloon8"></div>
+    <div class="poppable green-balloon" id="balloon9"></div>
+    <div class="poppable blue-balloon" id="balloon10"></div>
+
+    <div id="bpop-instructions"><p>Use your mouse or finger to position the dart then release to throw at the balloons.</p></div>
+    <div id="constraint"><div id="dart"></div></div>
+
+    <div id="prize-layer">
+        <h2>Congratulations</h2>
+        <p id="prize-description"></p>
+        <p><a href="#">Redeem your prize</a></p>
+    </div>
+
+</div>
+
+<script src="js/jquery-1.8.0.min.js"></script>
+<script src="js/jquery-ui.custom.min.js"></script>
+<script src="js/utils.js"></script>
+<script>
+
+$('#prize-layer').click(function(){
+    $('#bpop-game-board').on('click',window.parent.modalClose);
+})
+
+$.ajax({
+    type: "GET",
+    cache: false,
+    url: 'balloon-pop-prizes.json',
+    beforeSend: function(x) {
+        if(x && x.overrideMimeType) {
+            x.overrideMimeType("application/j-son;charset=UTF-8");
+        }
+    },
+    dataType: "json",
+    success: function(data){
+        // should only be one prize in the JSON data object
+        $('#prize-description').text('You won a ' + data.name);
+        $('<img src="'+ data.imgURL +'" alt="Prize Image">').insertAfter('#prize-description');
+
+    }
+});
+</script>
+
+<!-- plinko.js must come last -->
+<script src="js/balloon-pop.js"></script>
+
+</body>
+</html>

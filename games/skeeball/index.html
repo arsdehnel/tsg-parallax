@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Verizon Rewards &ndash; V-Ball</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
+<link rel="stylesheet" href="css/style.css?v=1.0">
+<!--[if gte IE 9]>
+<style type="text/css">.gradient {filter: none !important;}</style>
+<![endif]-->
+</head>
+<body>
+
+<div id="game-container">
+
+    <div id="instructions">
+        <blockquote>
+            <div class="start-text">
+                <h3>Congratulations!</h3>
+                <br />
+                <p>You won a chance to play the Skeeball Game, which allows you to be in control of your award. Follow these simple instructions and Lets roll!</p>
+                <ul>
+                    <li>The goal is to toss the ball into one of the cups at the end of the game table.</li>
+                    <li>To move the ball, click on the Right &amp; Left arrows.</li>
+                    <li>Keep your eye on the Power Meter at the top of the game before you toss. The wider it is, the more power you have.</li>
+                    <li>When ready, click on the "Let's Roll" button and good luck!</li>
+                </ul>
+            </div><!-- / .start -->
+
+            <div class="status0" style="display:none;">
+                <h3>Congratulations!</h3>
+                <br />
+                <p>You have used up all of your attempts.  Thank you for playing!
+                <br />
+            </div>
+            <div class="status1">
+                <h3>Congratulations!</h3>
+                <br />
+                <p><span class="pointDeposit">0</span> AwardperQs have been deposited into your account.</p>
+                <br />
+                <p><span class="gameAddition">0</span> AwardperQs have been added to your game total.</p>
+                <br />
+            </div><!-- / .winner -->
+
+            <div class="status2">
+                <h3>Congratulations!</h3>
+                <br />
+                <p><span class="pointDeposit">0</span> AwardperQs have been deposited into your account.</p>
+                <br />
+            </div><!-- / .non-winner -->
+
+            <div class="status99">
+                <h3>Error!</h3>
+                <p>An application error has occurred. Please contact Application Support.</p>
+            </div><!-- / .play-again -->
+
+            <div class="game-over">
+                <h3>Game Over</h3>
+                <br />
+                <p>You have run out of turns</p>
+                <br />
+            </div><!-- / .game-over -->
+
+            <p>
+                <a class="button play">Play</a>
+                <a class="button continue">Continue</a>
+                <a class="button new">New Game</a>
+                <a class="button exit">Exit Game</a>
+            </p>
+        </blockquote>
+    </div><!-- /#instructions -->
+
+    <div id="backboard"></div>
+    <div id="score"></div>
+    <div id="balls-remaining"></div>
+    <div class="power-wrap">
+    <div class="gradient" id="power-meter">
+        <p>POWER METER</p>
+        <div class="gradient" id="power"></div>
+    </div>
+    </div>
+
+    <div id="target-area"></div>
+
+    <!-- These point values are overwritten by the JSON request -->
+    <div class="cup-value" id="pv_1-1"></div> <!-- VBALL.options.awards[0] -->
+    <div class="cup-value" id="pv_1-5"></div> <!-- VBALL.options.awards[1] -->
+    <div class="cup-value" id="pv_1-3"></div>  <!-- VBALL.options.awards[2] -->
+    <div class="cup-value" id="pv_2-3"></div>  <!-- VBALL.options.awards[3] -->
+    <div class="cup-value" id="pv_3-3"></div>  <!-- VBALL.options.awards[4] -->
+    <div class="cup-value" id="pv_4-3"></div>  <!-- VBALL.options.awards[5] -->
+    <div class="cup-value" id="pv_5-3"></div>  <!-- VBALL.options.awards[6] -->
+
+    <div class="mask" id="mask_1-1"></div>
+    <div class="mask" id="mask_1-3"></div>
+    <div class="mask" id="mask_1-5"></div>
+    <div class="mask" id="mask_2-3"></div>
+    <div class="mask" id="mask_3-3"></div>
+    <div class="mask" id="mask_upper"></div>
+    <div class="mask" id="mask_middle"></div>
+    <div class="mask" id="mask_lower"></div>
+
+    <div id="lane"></div>
+
+    <img src="img/ball.png" id="ball" alt="">
+
+    <!-- <img src="img/ball.png" id="landed-ball" alt=""> -->
+
+    <div id="control-group">
+        <div class="controls move-btn" id="move-left"></div>
+        <div class="controls move-btn" id="move-right"></div>
+        <div class="controls" id="lets-roll"></div>
+    </div>
+</div>
+
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.path.js"></script>
+<script src="js/fastclick.js"></script>
+<!-- <script src="js/vball-game.js"></script>
+<script src="js/vball-setup.js"></script> -->
+<script src="js/vball.js"></script>
+</body>
+</html>

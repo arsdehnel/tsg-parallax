@@ -1,0 +1,138 @@
+.flexslider {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: inherit;
+    border-radius: 4px;
+    zoom: 1;
+    .slides {
+        height: inherit;
+        zoom: 1;
+        margin: 0;
+        padding: 0;
+        li{
+            margin: 0;
+            padding: 0;
+            height: inherit;
+            display: none;
+            -webkit-backface-visibility: hidden;  /* Hide the slides before the JS is loaded. Avoids image jumping */
+            background-size: cover;
+            color: white;
+        }
+        .content{
+            padding: 120px 0 0;
+            text-align: right;
+            @include breakpoint( baby-bear ) {
+                padding: 80px;
+            }
+            h3{
+                text-transform: uppercase;
+                margin: 1em 0 0;
+            }
+            .read-more{
+                margin-top: 2em;
+                a{
+                    color: white;
+                    border-color: white;
+                }
+            }
+            .divider{
+                margin: 1em 0;
+                span{
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+.flex-disabled{
+    visibility: hidden;
+}
+
+.flex-viewport {
+    height: inherit;
+    transition: all 1s ease;
+}
+
+
+.flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    li {
+        margin: 0 6px;
+        display: inline-block;
+        zoom: 1;
+        a{
+            width: 11px;
+            height: 11px;
+            display: block;
+            border: 2px solid white;
+            cursor: pointer;
+            text-indent: -9999px;
+            border-radius: 100%;
+            box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+            &:hover {
+                background: rgba( 255, 255, 255, 0.5);
+            }
+            &.flex-active {
+                background: white;
+                cursor: default;
+                pointer-events: none;
+            }
+        }
+    }
+}
+.flex-direction-nav{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include breakpoint( baby-bear ) {
+        display: none;
+    }
+     a {
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 150px;
+        height: 200px;
+        margin: -100px 0 0;
+        z-index: 10;
+        overflow: hidden;
+        opacity: .5;
+        cursor: pointer;
+        transition: all .2s ease;
+        font-size: 0;
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 180px;
+            text-align: center;
+        }
+        &:hover{
+            opacity: 1;
+        }
+        &.flex-prev{
+            left: 0;
+            &:before{
+                background: url(../svg/slider-arrow-left.svg) 50% 50% no-repeat;
+            }
+        }
+        &.flex-next{
+            right: 0;
+            &:before{
+                background: url(../svg/slider-arrow-right.svg) 50% 50% no-repeat;
+            }
+        }
+    }
+}
+
+
+.no-js .slides > li:first-child {display: block;}

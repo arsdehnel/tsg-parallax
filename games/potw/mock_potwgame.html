@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:app="http://www.appcelerator.org">
+	<head>
+		<title>Verizon Rewards </title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<script type="text/javascript" src="js/core.js"></script>
+		<script type="text/javascript" src="javascripts/entourage.js"></script>
+		<script type="text/javascript" src="entourage-ui/common/js/yahoo-min.js"></script>
+		<script type="text/javascript" src="js/portal_1a.js"></script>
+		<script type="text/javascript" src="js/jquery.cycle.js"></script>
+		<script type="text/javascript" src="legacy_scripts/treeMenu.js"></script>
+		
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="css/styles_1a.css" />
+
+
+
+
+
+		
+		<!-- Begin Internet Explorer 6 PNG Hack -->
+		<!--[if lte IE 6]>
+		<style type="text/css" media="screen">
+			img
+			{
+				behavior: url("css/behavior.pngfix.htc");
+			}
+		</style>
+		<![endif]-->
+		<!-- End Internet Explorer 6 PNG Hack -->
+	</head> 
+	<body>
+		<!-- Begin Page Wrapper Content -->
+		<div id="page_wrapper">
+        	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="header">
+	<div id="topMenu">
+		<div class="channelSelector">
+			
+				
+				
+					<span id="channel_name">CSSC</span> 
+					<img src="img/down_arrow.gif" alt="Click to Select" id="down_arrow"  />
+					<div class="channelList">
+						
+							<div class="channelItem">
+								<div class="checkArea"><img src="img/checkmark.gif" alt="Selected" class="show" /></div>
+								<div class="channelName">CSSC</div>
+							</div>
+						
+							<div class="channelItem">
+								<div class="checkArea"><img src="img/checkmark.gif" alt="Selected"  /></div>
+								<div class="channelName">BSBC</div>
+							</div>
+						
+							<div class="channelItem">
+								<div class="checkArea"><img src="img/checkmark.gif" alt="Selected"  /></div>
+								<div class="channelName">VZ Plus</div>
+							</div>
+						
+							<div class="channelItem">
+								<div class="checkArea"><img src="img/checkmark.gif" alt="Selected"  /></div>
+								<div class="channelName">Referral</div>
+							</div>
+						
+							<div class="channelItem">
+								<div class="checkArea"><img src="img/checkmark.gif" alt="Selected"  /></div>
+								<div class="channelName">Service Hero</div>
+							</div>
+						
+					</div>
+				
+			
+		</div>
+			
+		<div id="userControl">
+			<span class="name">TOM MILER </span>
+			
+			 
+			<span class="pipe">|</span> 
+			<a href="j_spring_security_logout">logout</a>
+		</div>
+	</div><!-- end #topMenu -->
+		
+	
+
+
+
+
+
+
+
+
+<!-- Start Main Navigation -->
+<ul class="menuBar">
+	
+		
+			
+				
+			
+			<li id="what`s_hot" class="menuItem activeMenuItem" >
+				<a href="home.action?tab=what`s_hot" class="menuLink">What`s Hot</a>
+			</li>
+		
+ 	
+		
+			
+			<li id="extras" class="menuItem " >
+				<a href="home.action?tab=extras" class="menuLink">Extras</a>
+			</li>
+		
+ 	
+		
+			
+			<li id="recent_programs" class="menuItem " >
+				<a href="home.action?tab=recent_programs" class="menuLink">Recent Programs</a>
+			</li>
+		
+ 	
+		
+			
+			<li id="management" class="menuItem " >
+				<a href="home.action?tab=management" class="menuLink">Management</a>
+			</li>
+		
+ 	
+	<li class="menuItem search">
+		
+
+
+
+
+
+
+
+<input type="text" id="query" name="search" class="search_field" validator="required" />
+<button type="button" id="start_search">Go</button>
+
+
+<div class="search_panel" on="r:search.request then function[showSearchPanel()]">
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="spinner"  style="display: none;opacity: 0.5;" on="r:search.request then show or r:search.response then hide or l:showSearchPanel.request then hide" > 
+		<img src="images/ajax-loader.gif" class="spinner_image"/> Processing your request...
+</span>
+	
+	<div class="search_results" on="l:showSearchPanel.request then hide or r:search.response[items.length=0] then show else hide" style="display:none;">No results found.</div>
+	<div class="search_results" on="l:showSearchPanel.request then hide or r:search.response[items.length > 0] then show else hide" style="display:none;">
+			
+		<div id="search_pagination" class="app_pagination" control="yui_paginator[message=l:search_page.request,alwaysVisible=true, previousPageLinkLabel=back,nextPageLinkLabel=more, pageReportTemplate={totalRecords} results&nbsp;|&nbsp;Page {currentPage} of {totalPages}]">
+			<span id="app_prev_search_pagination" class="prev" >{PreviousPageLink}</span>
+			<span id="app_pagination_showing_search_pagination" class="showing">{CurrentPageReport}</span>
+			<span id="app_next_search_pagination" class="next">{NextPageLink}</span>
+		</div>
+		<div style="border:0px solid;clear:both"></div>
+		<div control="iterator[property=items]" on="r:search.response[items.length > 0] then render">
+			<div style="float:left;width:450px;height:85px;margin:5px;">
+				<table cellspacing="0" cellpadding="0" border="0"><tr><td align="left" valign="top">
+					<p class="search_result_title"><a href="home.action?tab=#{tabId}&subTab=#{subTab}##{name}_anchor">#{title}</a> | #{tabName}</p>
+					<p class="search_result_description">#{description}</p>
+				</td></tr></table>			
+			</div>
+		</div>
+	</div>
+	<div class="close" id="close_search"><a href="#">Close search results</a></div>
+</div>
+<!-- End Search Panel -->
+
+ 
+<script>
+	$MQL("r:search.response", function(msg) {
+		data = msg.payload;
+		App.getControl('search_pagination','yui_paginator',function()
+		{
+			this.rowsPerPage( data.pageSize );
+			this.page( data.currentPage );
+			this.totalRecords(data.total );
+		});
+	});
+
+	$MQL("l:search_page.request", function(msg) {
+		data = msg.payload;
+		$MQ('r:search.request', { keyword: jQuery("#query").val(), page: data.page} );
+	});			
+			
+	function showSearchPanel() {
+		if(jQuery("div.panel").css("display") != "block"){
+			jQuery("div.search_panel").slideDown(250);
+		}
+		jQuery("li.search").addClass("opened");
+	}
+		
+	jQuery(document).ready(function()
+	{
+		jQuery('#query').keyup(function(e) {
+			if(e.keyCode == 13) {
+				JSON={ keyword : jQuery('#query').val() };
+				$MQ('r:search.request',JSON);
+			}
+		});
+		
+		jQuery('#start_search').click(function(e) {
+			JSON={ keyword : jQuery('#query').val() };
+			$MQ('r:search.request',JSON);
+		});
+	});
+</script>
+	</li>							
+</ul>
+<!-- End Main Navigation -->
+	
+	<div class="logoContainer">
+		<img src="img/logo_verizon_rewards.png" alt="Verizon Rewards" id="logo" />
+	</div>
+</div>
+
+	
+
+
+
+				
+
+<div style="display:none">	
+	<form id="channelForm" action="changeChannel.action" method="post">
+		<input id="channelField" type="hidden" name="channel"/>
+	</form>
+</div>
+	
+<script>
+	jQuery.modeString = 'mode2';
+
+	//remove the last bg class if recorded in data
+	$("body").removeClass("bg1");
+	$("body").removeClass("bg2");
+	$("body").removeClass("bg3");
+	$("body").removeClass("bg4");
+	
+	$("body").addClass('bg4');
+</script>
+	
+
+
+        	
+
+			<div id="content" >
+          		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+	<div class="largeModuleContainer">
+		<!-- Begin Big Module -->
+		
+
+
+
+        <!-- Begin Main Content Area -->
+        <ul class="column" id="left">
+            
+            <li id="col_1_1" class="moduleContainer">
+                <a name="potwgame_anchor"></a>
+                
+                <div class="module  mode2" id="potwgame_module">
+            	    <div class="module_topper">
+            		    <div class="module_label">
+                            Pirates of the Warehouse
+            		    </div>
+            		    <div class="module_toggles">
+            			    <div class="refresh_toggle"></div>
+            				<div class="minimize_toggle"> </div>
+            		    </div>
+            	    </div>
+            	    
+            	    <div class="module_content " id="potwgame_module_content" style="">
+                        <div id="potwgame_retrieved_content">
+                            <p class="full">
+                                <a class="thickbox" href="mock_potwgame_modal.html?&amp;keepThis=true&amp;TB_iframe=true&amp;height=729&amp;width=957&amp;modal=true&amp;id=1229358884340" title="Pirates of the Warehouse Game">Play the game!</a>
+                            </p>
+                        </div>
+            	    </div>
+                </div>
+
+            </li>
+    
+            <li id="col_1_5" class="moduleContainer" title="emptyModulePlaceholder"><div class="module6 empty" id="empty">&nbsp;</div></li>
+		</ul>
+		<!-- End Left Column -->
+		<!-- Begin Middle Column -->
+		<ul class="column" id="middle">
+		    
+		    <li id="col_2_5" class="moduleContainer" title="emptyModulePlaceholder"><div class="module6 empty" id="empty">&nbsp;</div></li>
+		</ul>
+		<!-- End Middle Column -->
+		<!-- Begin Right Column -->
+		<ul class="column" id="right">
+		    
+		    <li id="col_3_5" class="moduleContainer" title="emptyModulePlaceholder"><div class="module6 empty" id="empty">&nbsp;</div></li>
+		</ul>
+		<!-- End Right Column -->
+
+    <div class="clear">&nbsp;</div>
+    <!-- End Main Content Area -->
+			
+    <script language="javascript">
+    	jQuery(document).ready(function() {
+    		var i=0;
+    	  	for (i=0;i<=renderingQueue.length;i++){
+    			renderingItem = renderingQueue[i];
+    			try{
+    				eval( renderingItem );
+    			}catch( E ){
+    				//empty
+    			}
+    		}
+		
+    			detectDuplicateIDs();
+		
+    	});
+    </script>
+	</div>
+        	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- Start Footer -->
+			<div id="footer">
+				<span id="footerLinks">
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="help/contactUs.action?keepThis=true&TB_iframe=true&height=550&width=900&modal=true&id=1314201542435"  title="Contact Us" alt="Contact Us" class="thickbox">Contact Us</a>
+
+
+&nbsp;&nbsp;|&nbsp;&nbsp;
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="help/faq.action?keepThis=true&TB_iframe=true&height=550&width=950&modal=true&id=1314201542437"  title="FAQs" alt="FAQs" class="thickbox">FAQs</a>
+
+
+&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href="documents/travel/Telecom Regional Sales Program Guidelines.pdf" target="_blank">
+						Recognition and Incentive Program Guidelines
+					</a>
+				</span>
+				&copy;2011 Verizon. All Rights Reserved
+				
+				
+<div style="display:none" on="r:~.*[authenticated=false] then function[modalWindow('system/sessionExpired.action', 'Session Expired', 500, 150, true, true)]"></div>
+				
+
+
+
+
+ 
+			</div>
+			<!-- End Footer -->
+		</div>
+		
+        	
+
+		</div>
+		<script type="text/javascript" language="javascript" src="js/portal-callbacks.js"></script>
+	</body>
+</html>

@@ -1,0 +1,151 @@
+.divider {
+    @include clearfix();
+    span {
+        display: block;
+        height: 1px;
+        width: 60px;
+        background: #999;
+    }
+}
+
+.scroll-indicator{
+    position: absolute;
+    left: 345px;
+    bottom: 4em;
+    width: 270px;
+    height: 70px;
+    text-transform: uppercase;
+    @include breakpoint( baby-bear ){
+        left: 50%;
+        margin-left: -135px;
+    }
+    @include breakpoint( tiny-bear ){
+        display: none;
+    }
+    span,
+    a{
+        display: block;
+        text-align: center;
+        letter-spacing: .2em;
+        line-height: 70px;
+        color: white;
+        &:first-child{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &.arrow{
+            height: 70px;
+            width: 70px;
+            margin: 0 auto;
+            background: $teal;
+            border-radius: 100%;
+            svg{
+                height: 30px;
+                margin-top: 21px;
+            }
+        }
+        &:last-child{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+.loading-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: ( $loading-indicator-size * -1 );
+    width: $loading-indicator-size;
+}
+.loading-indicator::before,
+.loading-indicator::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  border-right: $loading-indicator-size solid transparent;
+  border-top: $loading-indicator-size solid $loading-indicator-color;
+  border-left: $loading-indicator-size solid $loading-indicator-color;
+  border-bottom: $loading-indicator-size solid $loading-indicator-color;
+  border-top-left-radius: $loading-indicator-size;
+  border-top-right-radius: $loading-indicator-size;
+  border-bottom-left-radius: $loading-indicator-size;
+  border-bottom-right-radius: $loading-indicator-size;
+  animation-duration: $loading-indicator-speed;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.loading-indicator::before {
+  animation-name: chompDown;
+}
+.loading-indicator::after {
+  animation-name: chompUp;
+}
+
+
+@keyframes chompDown {
+  0% {
+    transform: rotate( 0deg );
+  }
+  100% {
+    transform: rotate( 45deg );
+  }
+}
+@keyframes chompUp {
+  0% {
+    transform: rotate( 0deg );
+  }
+  100% {
+    transform: rotate( -45deg );
+  }
+}
+
+@keyframes animatedEllipsis1 {
+      0% { opacity: 0; }
+     10% { opacity: 0; }
+     20% { opacity: 1; }
+     90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes animatedEllipsis2 {
+      0% { opacity: 0; }
+     20% { opacity: 0; }
+     30% { opacity: 1; }
+     90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes animatedEllipsis3 {
+      0% { opacity: 0; }
+     30% { opacity: 0; }
+     40% { opacity: 1; }
+     90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+.hide{
+    display: none !important;
+}
+
+.visible .animated-ellipsis-dot{
+    opacity: 0;
+    animation-duration: $ellipsis-anim-duration;
+    animation-iteration-count: infinite;
+    &.animated-ellipsis-dot-1 {
+        animation-name: animatedEllipsis1;
+    }
+    &.animated-ellipsis-dot-2 {
+        animation-name: animatedEllipsis2;
+    }
+    &.animated-ellipsis-dot-3 {
+        animation-name: animatedEllipsis3;
+    }
+}

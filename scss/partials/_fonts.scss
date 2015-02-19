@@ -1,0 +1,164 @@
+$font-weight-hairline: 100;
+$font-weight-thin: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-heavy: 800;
+$font-weight-black: 900;
+
+/* HAIRLINE */
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-hairline-webfont.woff') format('woff');
+    font-weight: $font-weight-hairline;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-hairlineitalic-webfont.woff') format('woff');
+    font-weight: $font-weight-hairline;
+    font-style: italic;
+}
+
+/* THIN */
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-thin-webfont.woff') format('woff');
+    font-weight: $font-weight-thin;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-thinitalic-webfont.woff') format('woff');
+    font-weight: $font-weight-thin;
+    font-style: italic;
+}
+
+/* LIGHT */
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-light-webfont.woff') format('woff');
+    font-weight: $font-weight-light;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-lightitalic-webfont.woff') format('woff');
+    font-weight: $font-weight-light;
+    font-style: italic;
+}
+
+/* REGULAR */
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-regular-webfont.woff') format('woff');
+    font-weight: $font-weight-regular;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-regularitalic-webfont.woff') format('woff');
+    font-weight: $font-weight-regular;
+    font-style: italic;
+}
+
+/* MEDIUM */
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-medium-webfont.woff') format('woff');
+    font-weight: $font-weight-medium;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-mediumitalic-webfont.woff') format('woff');
+    font-weight: $font-weight-medium;
+    font-style: italic;
+}
+
+/* SEMIBOLD */
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-semibold-webfont.woff') format('woff');
+    font-weight: $font-weight-semibold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-semibolditalic-webfont.woff') format('woff');
+    font-weight: $font-weight-semibold;
+    font-style: italic;
+}
+
+/* BOLD */
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-bold-webfont.woff') format('woff');
+    font-weight: $font-weight-bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-bolditalic-webfont.woff') format('woff');
+    font-weight: $font-weight-bold;
+    font-style: italic;
+}
+
+/* HEAVY */
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-heavy-webfont.woff') format('woff');
+    font-weight: $font-weight-heavy;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-heavyitalic-webfont.woff') format('woff');
+    font-weight: $font-weight-heavy;
+    font-style: italic;
+}
+
+/* BLACK */
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-black-webfont.woff') format('woff');
+    font-weight: $font-weight-black;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-blackitalic-webfont.woff') format('woff');
+    font-weight: $font-weight-black;
+    font-style: italic;
+}
+
+/* PACIFICO */
+@font-face {
+    font-family: 'Pacifico';
+    src: url('../fonts/pacifico-webfont.woff') format('woff');
+    font-weight: $font-weight-regular;
+    font-style: normal;
+}
+
+/* NovitoNova */
+@font-face {
+    font-family: 'NovitoNova';
+    src: url('../fonts/novitonova-thin-webfont.eot');
+    src: url('../fonts/novitonova-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/novitonova-thin-webfont.woff2') format('woff2'),
+         url('../fonts/novitonova-thin-webfont.woff') format('woff'),
+         url('../fonts/novitonova-thin-webfont.ttf') format('truetype'),
+         url('../fonts/novitonova-thin-webfont.svg#novitonovathin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* FONTAWESOME */
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

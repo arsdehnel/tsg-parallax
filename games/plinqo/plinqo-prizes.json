@@ -1,0 +1,32 @@
+[
+    {
+        "id":"32",
+        "name":"Crockpot",
+        "imgURL":"img/prize1.png",
+        "value":125
+    },
+    {
+        "id":"453",
+        "name":"50 AwardperQs",
+        "imgURL":"img/prize2.png",
+        "value":50
+    },
+    {
+        "id":"87",
+        "name":"Wallet",
+        "imgURL":"img/prize3.png",
+        "value":25
+    },
+    {
+        "id":"12",
+        "name":"100 AwardperQs",
+        "imgURL":"img/prize4.png",
+        "value":100
+    },
+    {
+        "id":"909",
+        "name":"Grill",
+        "imgURL":"img/prize5.png",
+        "value":200
+    }
+]

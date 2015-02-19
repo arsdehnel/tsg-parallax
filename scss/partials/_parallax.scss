@@ -1,0 +1,26 @@
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.parallax-layer-content {
+    transform: translateZ(0);
+}
+.parallax-layer-background {
+    transform: translateZ(-.5px) scale(1.5);
+}
+
+// handle some better image sizes
+@media screen and (min-width: 2049px){
+    .parallax-layer-background {
+        transform: translateZ(-.5px) scaleX(2) scaleY(1.5);
+    }
+}

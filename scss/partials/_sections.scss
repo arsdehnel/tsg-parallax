@@ -1,0 +1,50 @@
+section{
+    height: 600px;
+    @include breakpoint( baby-bear ) {
+        height: auto;
+        padding-bottom: 30px;
+    }
+    &.section-teal{
+        background: $teal;
+        color: white;
+    }
+    .content{
+        position: relative;
+        width: 960px;
+        margin: 0 auto;
+        height: 100%;
+        @include breakpoint( baby-bear ){
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+    &.section-large{
+        height: 800px;
+        @include breakpoint( tiny-bear ) {
+            .parallax-layer-content & {
+                height: auto;
+            }
+        }
+    }
+    h2,
+    h3,
+    h4,
+    p{
+        margin: 0;
+    }
+    h2{
+        font-weight: $font-weight-thin;
+        font-size: 3em;
+    }
+    h3{
+        font-weight: $font-weight-black;
+        font-size: 2em;
+    }
+    p{
+        font-weight: $font-weight-regular;
+        font-size: 1em;
+    }
+    svg{
+        fill: currentColor;
+    }
+}

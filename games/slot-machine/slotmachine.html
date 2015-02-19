@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+        <head>
+        <title>Slot Machine</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/slot.css" />
+        <script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="scripts/slotmachine.js"></script>        
+        <script>
+            $(function() {
+            	$( "#slotTrigger" ).draggable({ containment: "#triggerContainer"});
+            });
+        </script>
+        </head>
+        <body>
+		<bgsound loop="0" id="runningsound">
+		<div id="stickHolder"></div>
+		<div id="triggerContainer">
+        <div id="leverStick"></div>
+        <img id="slotTrigger" src="images/leverBall.png"></div>
+		<div id="slotMachine">
+	        <div id="statusMsg"></div>
+            <div class="blinkLeft lights"><img src="images/leftlightBlinks.gif"/></div>
+            <div class="blinkRight lights"><img src="images/rightlightBlinks.gif"/></div>            
+        	<div class="logoContainer"><img src="images/logo.png"/></div>
+            <div id="showCredit"><p class="txtGrad">1</p></div>
+	        <div class="soundcontrol"><a href="#" class="soundoff">OFF</a> / <a href="#" class="soundon">ON</a></div>
+            <div></div>
+          	<div id="wheel1" class="wheel">
+            <div class="rotate">
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+			<img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />            
+            </div>
+            </div>
+	        <div id="wheel2" class="wheel">
+			<div class="rotate">
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+			<img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+			<img src="images/fruits.png" alt="" />          
+            </div>            
+            </div>
+    	    <div id="wheel3" class="wheel">
+			<div class="rotate">
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+			<img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+            <img src="images/fruits.png" alt="" />
+			<img src="images/fruits.png" alt="" />          
+            
+            </div>            
+            </div>
+          	<!--p id="slotSplash"></a><a class="play" title="Play" href="#">Play</a></p-->
+            <input type="hidden" id="gameType" value="0" /><input type="hidden" id="winLoose" value="0" />
+        </div>
+		<audio controls="controls" id="audio" style="visibility:hidden"></audio>
+</body>
+</html>

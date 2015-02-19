@@ -1,0 +1,106 @@
+.subpage-header{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 3em;
+    background: rgba( 0, 0, 0, .5 );
+    font-family: 'Lato';
+    z-index: $zindex-nav;
+    @include breakpoint( tiny-bear ) {
+        height: auto;
+    }
+    .content{
+        position: absolute;
+        left: 50%;
+        width: 960px;
+        margin-left: -480px;
+    }
+    @include breakpoint( baby-bear ) {
+        .content {
+            position: relative;
+            left: 0;
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+    h1{
+        line-height: 2em;
+        color: white;
+        margin: 0;
+        font-size: 1.5em;
+    }
+    @include breakpoint( tiny-bear ) {
+        h1 {
+            float: left;
+        }
+    }
+    .fancy{
+        font-family: 'NovitoNova';
+        text-transform: uppercase;
+        letter-spacing: .05em;
+    }
+    .nav-main{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    @include breakpoint( tiny-bear ) {
+        .nav-main {
+            position: relative;
+            float: right;
+            top: auto;
+            right: auto;
+            bottom: auto;
+            span {
+                display: none;
+            }
+        }
+    }
+    a{
+        position: relative;
+        display: inline-block;
+        color: white;
+        line-height: 3em;
+        text-decoration: none;
+        padding: 0 1em 0 2.5em;
+        @include breakpoint( tiny-bear ) {
+            padding: 0 1em;
+        }
+        svg {
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            height: 1em;
+            width: 1em;
+            fill: currentColor;
+            @include breakpoint( tiny-bear ) {
+                top: 0;
+                right: .25em;
+                left: .25em;
+            }
+        }
+        &.active{
+            pointer-events: none;
+            .page-dashboards &{
+                background: rgba( $teal, .5 );
+            }
+            .page-dataviz &{
+                background: rgba( $peach, .5 );
+            }
+            .page-games &{
+                background: rgba( $slate, .5 );
+            }
+        }
+        .page-dashboards &:hover{
+            background: $teal;
+        }
+        .page-dataviz &:hover{
+            background: $peach;
+        }
+        .page-games &:hover{
+            background: $slate;
+        }
+    }
+}

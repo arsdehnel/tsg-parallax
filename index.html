@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
+<head>
+    <script src="js/modernizr.dev.js"></script>
+    <title>TSG Creative and Front End Development</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/jquery-2.1.1.min.js"></script>
+</head>
+<body class="page-home">
+    <?php include_once("svg/defs.svg"); ?>
+    <div class="parallax">
+        <div class="parallax-layer parallax-layer-background">
+            <section id="welcome-background" class="section-welcome section-large"></section>
+            <section id="we-help-background" class="section-we-help"></section>
+        </div>
+        <div class="parallax-layer parallax-layer-content">
+            <section id="welcome" class="section-welcome section-large">
+                <div class="content">
+                    <div class="welcome-animation">
+                        <img src="img/iphone-hand.png" class="welcome-phone">
+                        <img src="img/iphone-monocle.png" class="welcome-screen">
+                    </div>
+                    <p>WE ARE</p>
+                    <h1>
+                        <span class="team-name-element">TSG</span>
+                        <span class="team-name-element fancy">Creative</span></h1>
+                    <p>Design wizards with</p>
+                    <p>limitless imagination.</p>
+                    <div class="scroll-indicator">
+                        <span>scroll</span>
+                        <a href="#recent" class="arrow click-scroll">
+                            <svg viewBox="0 0 100 100" class="icon">
+                                <use xlink:href="svg/defs.svg#icon-down-arrow"></use>
+                            </svg>
+                        </a>
+                        <span>please</span>
+                    </div>
+                </div>
+            </section><!-- /.section-welcome -->
+            <section id="recent" class="section-recent scroll-watch">
+                <div class="content">
+                    <img src="img/iphone.png" class="slide-in">
+                    <h2>Mobile Web</h2>
+                    <h3>Some interesting statistics</h3>
+                    <p class="divider"><span></span></p>
+                    <p><strong>In January 2014, for the first time, people spent more time on the internet on mobile devices than they did on personal computers, marking a new trend in internet use.</strong></p>
+                    <p>Interestingly, mobile internet isn't just for consumers. Business executives lead the way in mobile adoption, so it's important for B2B enterprises to also plan to interact with their clients on the mobile web. </p>
+                    <p class="read-more"><a href="http://www.engeniusweb.com/blog/mobile-exceeds-desktop-internet-usage/" class="btn" target="_blank">read more</a></p>
+                </div>
+            </section><!-- /.recent -->
+            <section id="we-help" class="section-we-help section-large scroll-watch">
+                <header class="subpage-header">
+                    <div class="content">
+                        <nav class="nav-we-help">
+                            <a href="#" class="badges-home">
+                                <svg viewBox="0 0 100 100" class="icon">
+                                    <use xlink:href="svg/defs.svg#icon-home"></use>
+                                </svg>
+                                How Can We Help?
+                            </a>
+                            <a href="#badge-detail-apps" class="badge-apps" data-badge="apps">
+                                Website / Apps
+                            </a>
+                            <a href="#badge-detail-emails" class="badge-emails" data-badge="emails">
+                                HTML Emails
+                            </a>
+                            <a href="#badge-detail-games" class="badge-games" data-badge="games">
+                                Games
+                            </a>
+                            <a href="#badge-detail-misc" class="badge-misc" data-badge="misc">
+                                Miscellaneous
+                            </a>
+                        </nav>
+                    </div>
+                </header>
+                <div class="content badges-grid">
+                    <h2 class="visible">How Can We Help?</h2>
+                    <nav class="grid-wrapper">
+                        <div class="badge-wrapper left grid-cell-10 badge-apps scroll-watch">
+                            <a href="#badge-detail-apps" class="badge-action" data-badge="apps"></a>
+                            <div class="badge-image"></div>
+                            <span class="badge-label">Website / Apps</span>
+                        </div>
+                        <div class="badge-wrapper right grid-cell-10 badge-emails scroll-watch">
+                            <a href="#badge-detail-emails" class="badge-action" data-badge="emails"></a>
+                            <div class="badge-image"></div>
+                            <span class="badge-label">HTML Emails</span>
+                        </div>
+                        <div class="badge-wrapper left grid-cell-10 badge-games scroll-watch">
+                            <a href="#badge-detail-games" class="badge-action" data-badge="games"></a>
+                            <div class="badge-image"></div>
+                            <span class="badge-label">Games</span>
+                        </div>
+                        <div class="badge-wrapper right grid-cell-10 badge-misc scroll-watch">
+                            <a href="#badge-detail-misc" class="badge-action" data-badge="misc"></a>
+                            <div class="badge-image"></div>
+                            <span class="badge-label">Miscellaneous</span>
+                        </div>
+                    </nav>
+                </div>
+                <div id="badge-detail-apps" class="badge-detail badge-detail-apps">
+                    <div class="content">
+                        <h2>Website/Apps</h2>
+                        <p class="divider"><span></span></p>
+                    </div>
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <div class="content">
+                                    <h3><span>01.</span> Wire Frames</h3>
+                                    <p>We capture business requirements and conjure site elements in an<br>effort to give everything on paper for the best user experience</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>02.</span> Visual Design</h3>
+                                    <p>After researching the brand, we'll focus on the proper<br>aesthetics to provide rock star mockups</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>03.</span> Front-end Dev</h3>
+                                    <p>Once approved, FED starts to breathe life into the design by<br>leveraging mad HTML, CSS and JavaScript skills</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>04.</span> Visual QA/Fixes <small>1st round</small></h3>
+                                    <p>We take a peek at what front-end delivered and bug any issues</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>05.</span> Back-end Dev</h3>
+                                    <p>Front-end meets with dev to implement<br>and back-end goes to work</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>06.</span> Visual QA/Fixes <small>2nd round</small></h3>
+                                    <p>After researching the brand, we'll focus on the proper<br>aesthetics to provide rock star mockups</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>07.</span>Launch</h3>
+                                    <p>Let the world know!</p>
+                                    <p class="read-more"><a href="#" class="btn badges-home">done</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- /.badge-detail.badge-detail-apps -->
+                <div id="badge-detail-emails" class="badge-detail badge-detail-emails">
+                    <div class="content">
+                        <h2>HTML Emails</h2>
+                        <p class="divider"><span></span></p>
+                    </div>
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <div class="content">
+                                    <h3><span>01.</span> Visual Design</h3>
+                                    <p>We take the content and provide an engaging email design</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>02.</span> Front-end Dev</h3>
+                                    <p>Once approved, FED codes the design</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>03.</span> Visual QA/Fixes</h3>
+                                    <p>We take a peek at what front-end delivered and bug any issues</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>04.</span> Blast</h3>
+                                    <p>FED team will send to the proper associate to fire off the email</p>
+                                    <p class="read-more"><a href="#" class="btn badges-home">done</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- /.badge-detail.badge-detail-emails -->
+                <div id="badge-detail-games" class="badge-detail badge-detail-games">
+                    <div class="content">
+                        <h2>Games</h2>
+                        <p class="divider"><span></span></p>
+                    </div>
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <div class="content">
+                                    <h3><span>01.</span> Wire Frames</h3>
+                                    <p>We capture business requirements and detail game elements</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>02.</span> Storyboard</h3>
+                                    <p>We provide a short visual walkthrough of how the game might interact</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>03.</span> Visual Design</h3>
+                                    <p>We'll focus on the proper aesthitics to provide rock star mockups</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>04.</span> Front-end Dev</h3>
+                                    <p>Once approved, FED starts to breathe life into the design<br>by leveraging mad HTML, CSS and JavaScript skills</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>05.</span> Visual QA/Fixes <small>1st round</small></h3>
+                                    <p>We take a peek at what front-end delivered and bug any issues</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>06.</span> Back-end Dev</h3>
+                                    <p>Front-end meets with dev to implement and back-end goes to work</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>07.</span> Visual QA/Fixes <small>2nd round</small></h3>
+                                    <p>We take a final pass at the site once functional QA is completed and we give our blessing</p>
+                                    <p class="read-more"><a href="#" class="btn flexslider-next">next</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3><span>08.</span> Launch</h3>
+                                    <p>Boom!</p>
+                                    <p class="read-more"><a href="#" class="btn badges-home">done</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- /.badge-detail.badge-detail-games -->
+                <div id="badge-detail-misc" class="badge-detail badge-detail-misc">
+                    <div class="content">
+                        <h2>Banners/Badges/Logos</h2>
+                        <p class="divider"><span></span></p>
+                    </div>
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <div class="content">
+                                    <h3>Visual Design</h3>
+                                    <p>We create the most exciting site element you've ever seen ;-)</p>
+                                    <p class="read-more"><a href="#" class="btn badges-home">done</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- /.badge-detail.badge-detail-misc -->
+            </section><!-- /.section-we-help -->
+            <section id="quotes" class="section-quotes">
+                <div class="content">
+                    <h2>Inspirational Quotes</h2>
+                    <p>This is where something profoundly awesome might be mentioned.</p>
+                    <blockquote>
+                        <svg viewBox="0 0 100 100" class="icon quote-left">
+                            <use xlink:href="svg/defs.svg#icon-quote-left"></use>
+                        </svg>
+                        <svg viewBox="0 0 200 200" class="icon quote-right">
+                            <use xlink:href="svg/defs.svg#icon-quote-right"></use>
+                        </svg>
+                        <img src="img/quote-avatar.jpg" class="avatar">
+                        <p>If you do build a great experience, customers tell each other about that.  Word of mouth is very powerful.</p>
+                        <footer>
+                            <cite>
+                                <p><strong>Jeff Bezos</strong></p>
+                                <p>CEO of Amazon</p>
+                            </cite>
+                    </blockquote>
+                </div>
+            </section><!-- /.quotes -->
+            <section id="case-studies" class="case-studies">
+                <div class="flexslider">
+                    <ul class="slides">
+<!--                         <li class="case-study-1">
+                            <div class="content article-right">
+                                <h2>Something Cool We Did</h2>
+                                <h3>The Verizon Wireless App</h3>
+                                <p class="divider"><span></span></p>
+                                <p>Fully customized responsive web design "Engagement Engine" leverages principals from Behavioral Economics and Gamifcation. Some components include leaderboards, achievement badges, performance dashboards, and real-time coaching tools.</p>
+                                <p class="read-more"><a href="img/case-studies/case-study-1-modal-lg.jpg" class="btn modal-trigger" data-content-type="image">view</a></p>
+                            </div>
+                        </li> -->
+                        <li class="case-study-2">
+                            <div class="content">
+                                <h2>Product Enhancement</h2>
+                                <h3>Milestone Experience</h3>
+                                <p class="divider"></p>
+                                <p>Recognize a service award recipient with a congratulatory message from their manager, Recognition PURL&trade;, celebration video, fun facts from their hire date year, and much more.</p>
+                                <p class="read-more"><a href="img/case-studies/case-study-2-modal-lg.jpg" class="btn modal-trigger" data-content-type="image">view</a></p>
+                            </div>
+                        </li>
+                        <li class="case-study-3">
+                            <div class="content">
+                                <h2>Concept</h2>
+                                <h3>One Honda Rewards</h3>
+                                <p class="divider"></p>
+                                <p>This lifecycle marketing program is being pitched by the Customer Engagement and Automotive Groups to Honda in support of their innovative corporate initiative to drive owner loyalty and overall customer satisfaction across all Honda products: auto (Honda and Acura), marine, power sports, and power equipment.</p>
+                                <p class="read-more"><a href="img/case-studies/case-study-3-modal-lg.jpg" class="btn modal-trigger" data-content-type="image">view</a></p>
+                            </div>
+                        </li>
+                        <li class="case-study-4">
+                            <div class="content">
+                                <h2>Web App</h2>
+                                <h3>AT&T Driver Safety</h3>
+                                <p class="divider"></p>
+                                <p>The Drive Care dashboard is a visual way to positively influence employees who drive company vehicles as part of their job. Giving drivers visibility of their driving habits and providing goals for improvement creates an environment where employees are in control of adjusting their behaviors and improving safety for both themselves and others on the road.</p>
+                                <p class="read-more"><a href="img/case-studies/case-study-4-modal-lg.jpg" class="btn modal-trigger" data-content-type="image">view</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section><!-- /.case-studies -->
+            <section id="stats" class="stats">
+                <div class="content">
+                    <h2>Jan - November 2014</h2>
+                    <div class="grid-wrapper">
+                        <div class="grid-cell-5">
+                            <svg viewBox="0 0 100 100" class="icon">
+                                <use xlink:href="svg/defs.svg#icon-check-circled"></use>
+                            </svg>
+                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-duration="1000">2242</h4>
+                            <p class="stat-label">Basecamp To-dos<br>Completed</p>
+                        </div>
+                        <div class="grid-cell-5">
+                            <svg viewBox="0 0 100 100" class="icon">
+                                <use xlink:href="svg/defs.svg#icon-rocket"></use>
+                            </svg>
+                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-duration="1000">78</h4>
+                            <p class="stat-label">websites<br>launched</p>
+                        </div>
+                        <div class="grid-cell-5">
+                            <svg viewBox="0 0 100 100" class="icon">
+                                <use xlink:href="svg/defs.svg#icon-heads"></use>
+                            </svg>
+                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-duration="1000">210</h4>
+                            <p class="stat-label">clients<br>served</p>
+                        </div>
+                        <div class="grid-cell-5">
+                            <svg viewBox="0 0 100 100" class="icon">
+                                <use xlink:href="svg/defs.svg#icon-coffee"></use>
+                            </svg>
+                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-start-value="497" data-spinup-duration="100000">572</h4>
+                            <p class="stat-label">cups of<br>coffee</p>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- /.stats -->
+            <section id="examples" class="examples articles">
+                <div class="flexslider flexslider-manual">
+                    <ul class="slides">
+                        <li class="example-1">
+                            <div class="content article-right">
+                                <h2>Games</h2>
+                                <h3>Make it fun and they'll engage</h3>
+                                <p class="divider"><span></span></p>
+                                <p>Gamification is one of BIW's key strategies. We've been working hard to come up with fun, quick, and easy to play HTML 5 games that work on all devices. See what you think. Add 'em to a sale.</p>
+                                <p class="read-more"><a href="games.html" class="btn">view</a></p>
+                            </div>
+                        </li>
+                        <li class="example-2">
+                            <div class="content">
+                                <h2>Data Vizualization</h2>
+                                <h3>Seeing is believing</h3>
+                                <p class="divider"></p>
+                                <p>There's nothing more boring than a table full of numbers. It's hard to look at, hard to read, and not remotely enticing upon return visits. Thankfully, there's an answer: creative data visualization. TSG Creative are up on all the latest infographic trends. Think speedometers are all we can do? Think again.</p>
+                                <p class="read-more"><a href="dataviz.html" class="btn">view</a></p>
+                            </div>
+                        </li>
+                        <li class="example-3">
+                            <div class="content">
+                                <h2>Dashboards</h2>
+                                <h3>At your fingertips</h3>
+                                <p class="divider"></p>
+                                <p>Need to show a participant a lot of data? Like a lot lot of data? We have just the answer for you: the dashboard. We can organize your information into an at-a-glance, logical interface that is both easy on the eye and totally cool. Our information architects know the best way to organize everything. And our team of graphic designers know how to polish 'em to make them super shiny.</p>
+                                <p class="read-more"><a href="dashboards.html" class="btn">view</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section><!-- /.examples -->
+            <section id="footer" class="section-footer">
+                <div class="content">
+                    <h2 class="scroll-watch">Contact Us Anytime &ndash; We'll Wait<span class="animated-ellipsis-dot animated-ellipsis-dot-1">.</span><span class="animated-ellipsis-dot animated-ellipsis-dot-2">.</span><span class="animated-ellipsis-dot animated-ellipsis-dot-3">.</span>  </h2>
+                    <div class="grid-wrapper grid-pad-30">
+                        <div class="grid-cell-6 footer-item scroll-watch">
+                            <div>
+                                <svg viewBox="0 0 100 100" class="icon">
+                                    <use xlink:href="svg/defs.svg#icon-email"></use>
+                                </svg>
+                            </div>
+                            <h4>Email</h4>
+                            <p>tsgcreativeteam@biworldwide.com</p>
+                        </div>
+                        <div class="grid-cell-1">&nbsp;</div>
+                        <div class="grid-cell-6 footer-item scroll-watch">
+                            <div>
+                                <svg viewBox="0 0 100 100" class="icon">
+                                    <use xlink:href="svg/defs.svg#icon-phone"></use>
+                                </svg>
+                            </div>
+                            <h4>Phone</h4>
+                            <p>952.844.4364</p>
+                        </div>
+                        <div class="grid-cell-1">&nbsp;</div>
+                        <div class="grid-cell-6 footer-item scroll-watch">
+                            <div>
+                                <svg viewBox="0 0 100 100" class="icon">
+                                    <use xlink:href="svg/defs.svg#icon-pin-1"></use>
+                                </svg>
+                            </div>
+                            <h4>Location</h4>
+                            <p>Bldg 2, Edina</p>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- /.footer -->
+        </div><!-- /.parallax-layer.parallax-layer-content -->
+    </div><!-- /.parallax -->
+    <script src="js/main.min.js"></script>
+    <div class="modal-overlay hide"></div>
+    <div class="modal-window hide">
+        <button type="button" class="modal-close hide">
+            <svg viewBox="0 0 52 52" class="icon">
+                <use xlink:href="svg/defs.svg#icon-modal-close"></use>
+            </svg>
+        </button>
+        <div class="loading-indicator"></div>
+        <div class="modal-body"></div>
+    </div>
+</body>
+</html>

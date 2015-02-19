@@ -1,0 +1,53 @@
+.section-quotes{
+    background: #773bb3;
+    color: white;
+    padding-top: 80px;
+    p{
+        color: #a16ed3;
+        margin-top: 1em;
+    }
+    blockquote{
+        height: 260px;
+        margin: 110px 0 0;
+        padding-left: 200px;
+        position: relative;
+        svg{
+            position: absolute;
+            fill: #7e45b7;
+        }
+        .quote-left{
+            top: -30px;
+            left: 190px;
+            height: 80px;
+        }
+        .quote-right{
+            right: 0;
+            bottom: 10px;
+            height: 145px;
+        }
+        .avatar{
+            position: absolute;
+            left: 0;
+            height: 200px;
+            border-radius: 100%;
+        }
+        p{
+            position: relative;
+            padding: 0 20px;
+            font-weight: $font-weight-light;
+            font-style: italic;
+            font-size: 2em;
+            color: white;
+        }
+        footer{
+            margin-top: 2em;
+            p{
+                font-size: 1.1em;
+                font-style: normal;
+                strong{
+                    font-weight: $font-weight-medium;
+                }
+            }
+        }
+    }
+}

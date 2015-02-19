@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rocket Game</title>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="source/jquery.fancybox.js"></script>
+
+<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css" media="screen" />
+
+<script>
+$(document).ready(function() {
+	$("a.fancybox").fancybox({
+        fitToView:false,
+        autoSize:false,
+        'width': 910,
+        'height': 685,
+        'autoScale':true,
+        'type': 'iframe'
+    }).click();
+});
+</script>
+
+</head>
+<body>
+<a class="fancybox fancybox.iframe" width="900px" href="game.html">Launch Game</a>
+
+</body>

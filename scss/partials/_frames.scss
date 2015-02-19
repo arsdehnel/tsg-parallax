@@ -1,0 +1,26 @@
+.framed-ipad {
+    background: url(../img/dashboards/frame-ipad.png) 50% 50% no-repeat;
+    height: 364px;
+    width: 476px;
+    padding-top: 55px;
+}
+
+.framed-imac {
+    background: url(../img/dashboards/frame-imac.png) 50% 50% no-repeat;
+    height: 387px;
+    width: 476px;
+    padding-top: 26px;
+    img {
+       width: 410px;
+    }
+}
+
+.framed-macbookair {
+    background: url(../img/dashboards/frame-macbookair.png) 50% 50% no-repeat;
+    height: 364px;
+    width: 476px;
+    padding-top: 79px;
+    img {
+       width: 302px;
+    }
+}

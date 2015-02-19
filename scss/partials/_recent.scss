@@ -1,0 +1,32 @@
+.section-recent{
+    background: #e9e9e9;
+    .content{
+        padding-top: 100px;
+        color: #606060;
+        padding-right: 450px;
+        @include breakpoint( baby-bear ) {
+            padding: 50px;
+        }
+    }
+    h2{
+        margin: .25em 0;
+    }
+    h3{
+        color: #999;
+        text-transform: uppercase;
+    }
+    p{
+        margin: 1em 0;
+    }
+    .read-more{
+        margin: 2em 0 0;
+    }
+    img{
+        position: absolute;
+        right: 0;
+        bottom: -145px;
+        @include breakpoint( baby-bear ) {
+            display: none;
+        }
+    }
+}

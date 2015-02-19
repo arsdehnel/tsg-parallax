@@ -1,0 +1,15 @@
+- number spin up
+- recent img slide in
+- parallax
+- mustache wiggle
+- html cleanup
+- css cleanup
+- scss partials for each section
+- mobile backgrounds
+- mobile disable parallax
+- readme for devs
+- readme for designers/maintainers
+- flexslider controls
+- modal
+- badge inner navigation
+- slider on view

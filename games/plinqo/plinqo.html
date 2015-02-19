@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Plinqo</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" href="css/plinko.css">
+</head>
+<body>
+
+<div id="plinko-game-board">
+    <div id="plinko-instructions">Place the Plinko Chip to Play</div>
+    <div id="constraint">
+        <div id="chip"></div>
+    </div>
+    <div id="slots">
+        <div id="slot1" class="slot"></div>
+        <div id="slot2" class="slot"></div>
+        <div id="slot3" class="slot"></div>
+        <div id="slot4" class="slot"></div>
+        <div id="slot5" class="slot"></div>
+    </div>
+    <div id="prizes">
+        <div class="prize" id="prize0"></div>
+        <div class="prize" id="prize1"></div>
+        <div class="prize" id="prize2"></div>
+        <div class="prize" id="prize3"></div>
+        <div class="prize" id="prize4"></div>
+    </div>
+
+    <div id="prize-layer" style="display: none;">
+        <div class="redeem-left-bar"></div>
+        <div class="prize-content">
+            <h3 class="you-won">Congratulations! You won!</h3>
+            <p id="prize-description">150</p>
+            <p>AwardperQs have been deposited into your account.</p>
+        </div>
+        <div class="redeem-right-bar"></div>
+    </div>
+    <div id="plinko-back">
+        <h3>Prize details here.</h3>
+        <p>Click to return to game listing.</p>
+    </div>
+</div>
+
+<script src="js/jquery-1.8.0.min.js"></script>
+<script src="js/jquery-ui.custom.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/rotate.js"></script>
+<script>
+
+var prizes = [], // will be populated with JSON, and used to send back the winning prize
+    winningPrize,
+    url = 'award.html';
+
+$.ajax({
+    type: "GET",
+    cache: false,
+    url: 'plinqo-prizes.json',
+    beforeSend: function(x) {
+        if(x && x.overrideMimeType) {
+            x.overrideMimeType("application/j-son;charset=UTF-8");
+        }
+    },
+    dataType: "json",
+    success: function(data){
+        prizes = data;
+        var i,
+            val;
+        for (i = 0; i < data.length; i++) {
+            $('#prize' + i).append('<img src="'+ data[i].imgURL +'" alt="'+ data[i].name +'" data-id="'+ data[i].id +'">');
+            if (i == 0) { // first time through loop set val
+                val = data[i].value;
+                winningPrize = i;
+            } else {
+                if (val > data[i].value) {
+                    val = data[i].value;
+                    winningPrize = i; // set winning prize to lowest valued prize
+                }
+            }
+        }
+    }
+});
+</script>
+
+<!-- plinko.js must come last -->
+<script src="js/interface.js"></script>
+<script src="js/plinko.js"></script>
+
+
+</body>
+</html>

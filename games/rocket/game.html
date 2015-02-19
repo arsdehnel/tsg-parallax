@@ -1,0 +1,103 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]--><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link href="css/launcher.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="source/jquery.fancybox.css" media="screen" />
+
+<script src="js/modernizr.js"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.rotate.js"></script>
+<script src="js/launcher.js"></script>
+
+<script>
+$(document).ready(function() {
+	//$(".gameOver").css("display","block");
+});
+</script>
+
+</head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Rocket Launch</title>
+</head>
+<body class="launchBody">
+
+
+<div style="display:block;">
+<div id="launchWrapper">
+
+
+<div class="gameOver" style="display:none;">
+	<div class="congratsMsg">
+		<div class="congratsBg">
+			<h2>CONGRATULATIONS!</h2>
+		</div>
+        <p>You have won <span id="pointValue">1000</span> points!
+        <div class="buttons"><a href="#" class="btn btn-confirm" id="btnContinue">Close</a></div>
+	</div>
+</div>
+<img class="splash" src="images/splashme.png">
+	<article id="message">
+    	Select a rocket to move it to the gantry, then press the launch button to reveal your prize!
+    </article>
+    <section class="launcherContainer">
+    	<section class="rocketReady">
+		</section>
+    	<section id="launcher" class="level0">
+
+		</section>
+		<section id="launcher" class="rocket_holder">
+
+		</section>
+    </section>
+    <section id="launcherConrol">
+    	<a href="#" class="launchOn">
+			Click here to
+            <p class="txtLaunch">Launch</p>
+        </a>
+    </section>
+    <section id="rocketSection">
+    	<section id="rocket1" class="rockets">
+        	<div class="selectedImg"><img src="images/pink-rocket.png" /></div>
+             <span class="shadow"><img src="images/rocketShadow.png" align="middle" /></span>
+			<span class="choose"></span>
+            <h1>1</h1>
+        </section>
+    	<section id="rocket2" class="rockets">
+             <div class="selectedImg"><img src="images/orange-rocket.png" /></div>
+             <span class="shadow"><img src="images/rocketShadow.png" align="middle" /></span>
+  			 <span class="choose"></span>
+             <h1>2</h1>
+        </section>
+    	<section id="rocket3" class="rockets">
+             <div class="selectedImg"><img src="images/blue-rocket.png" /></div>
+             <span class="shadow"><img src="images/rocketShadow.png" align="middle" /></span>
+ 			 <span class="choose"></span>
+             <h1>3</h1>
+        </section>
+    	<section id="rocket4" class="rockets">
+             <div class="selectedImg"><img src="images/gray-rocket.png" /></div>
+             <span class="shadow"><img src="images/rocketShadow.png" align="middle" /></span>
+ 			 <span class="choose"></span>
+             <h1>4</h1>
+        </section>
+    	<section id="rocket5" class="rockets">
+             <div class="selectedImg"><img src="images/green-rocket.png" /></div>
+             <span class="shadow"><img src="images/rocketShadow.png" align="middle" /></span>
+ 			 <span class="choose"></span>
+             <h1>5</h1>
+        </section>
+    </section>
+</div>
+</div>
+<script>
+	$(document).ready(function() {
+	  rocketLaunch();
+	});
+</script>
+</body>
+</html>

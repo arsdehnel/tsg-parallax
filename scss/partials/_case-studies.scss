@@ -1,0 +1,5 @@
+@for $i from 1 to 8{
+    .case-study-#{$i}{
+        background: url(../img/case-studies/case-study-#{$i}-bg-lg.png) 50% 0 no-repeat;
+    }
+}

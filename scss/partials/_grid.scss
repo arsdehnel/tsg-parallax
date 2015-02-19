@@ -1,0 +1,44 @@
+.grid-wrapper{
+    @include clearfix();
+    [class*='grid-cell-'] {
+        float: left;
+    }
+    &.grid-pad-24{
+        [class*='grid-cell-'] {
+            padding: 0 12px 30px;
+            &:first-of-type{
+                padding: 0 12px 30px 0;
+            }
+            &:last-of-type{
+                padding: 0 0 30px 12px;
+            }
+        }
+    }
+    &.grid-pad-30{
+        [class*='grid-cell-'] {
+            padding: 0 15px 30px;
+            &:first-of-type{
+                padding: 0 15px 30px 0;
+            }
+            &:last-of-type{
+                padding: 0 0 30px 15px;
+            }
+        }
+    }
+    &.grid-pad-90{
+        [class*='grid-cell-'] {
+            padding: 0 45px 30px;
+            &:first-of-type{
+                padding: 0 45px 30px 0;
+            }
+            &:last-of-type{
+                padding: 0 0 30px 45px;
+            }
+        }
+    }
+    @for $i from 1 through 20{
+        .grid-cell-#{$i}{
+            width: calc( 100% * ( #{$i} / 20 ) );
+        }
+    }
+}

@@ -1,0 +1,113 @@
+.section-examples{
+    height: auto;
+    background: white;
+}
+
+@for $i from 1 to 8{
+    .example-#{$i}{
+        background: url(../img/examples/example-#{$i}-lg.png) no-repeat;
+    }
+}
+
+.example-module{
+    padding: 150px 0;
+    border-bottom: 1px solid #cbcbcb;
+    color: $darkgrey;
+    &:last-of-type{
+        border-bottom: 0;
+    }
+    @include breakpoint( baby-bear ){
+        padding: 80px 25px;
+    }
+    @include breakpoint( tiny-bear ){
+        padding: 30px 10px;
+    }
+    article{
+        position: relative;
+        width: 990px;
+        margin: 0 auto;
+        min-height: 300px;
+        padding-left: 300px;
+        @include breakpoint( baby-bear ){
+            width: 100%;
+        }
+        @include breakpoint( tiny-bear ){
+            padding-left: 0;
+        }
+        .example-circle,
+        .example-logo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 270px;
+            width: 270px;
+            @include breakpoint( tiny-bear ) {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                float: left;
+                margin-right: 10px;
+            }
+        }
+        &.example-circle {
+            border-radius: 100%;
+            border: 10px solid #cbcbcb;
+            @include breakpoint( tiny-bear ) {
+                border-width: 5px;
+            }
+        }
+        h3{
+            font-size: 2em;
+            text-transform: uppercase;
+            color: inherit;
+        }
+        p{
+            font-size: 1.25em;
+            margin: 1em 0;
+        }
+        .read-more{
+            font-size: 1em;
+            margin-top: 2em;
+        }
+    }
+    &.alternating:nth-child(even) article{
+        padding-left: 0;
+        padding-right: 300px;
+        @include breakpoint( tiny-bear ) {
+            padding-right: 0;
+        }
+        .example-logo{
+            right: 0;
+            left: auto;
+        }
+    }
+    .screenshots{
+        @include breakpoint( tiny-bear ) {
+            display: none;
+        }
+        text-align: center;
+        a{
+            display: inline-block;
+            margin: 0 40px;
+        }
+        .fixed-width-175 {
+            width: 175px;
+            max-width: 100%;
+        }
+        .fixed-height-170 {
+            height: 170px;
+            max-width: 100%;
+        }
+        .bottom-aligned {
+            position: relative;
+            *{
+                position: absolute;
+                bottom: 40px;
+                left: 0;
+            }
+        }
+    }
+    &.gauge-module .screenshots img{
+        // width: 170px;
+    }
+}

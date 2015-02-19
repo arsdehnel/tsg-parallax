@@ -1,0 +1,98 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Big Prize Wheel</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" href="css/prize-wheel.css">
+</head>
+<body>
+
+<div id="bpw-game-board">
+    <div class="wheel-frame">&nbsp;</div>
+    <div id="wheel-wrapper">
+        <div class="wheel-shadow top">&nbsp;</div>
+        <div id="wheel">
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+
+            <!-- Wheel will always stop on this next element: ajax call will retrieve prize
+                 and give the image tag the correct src attribute. All other image tags can
+                 be filled with whatever content is available -->
+            <div class="prize-box"><img src="" alt="Prize Image" class="prize winner"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+            <div class="prize-box award"></div>
+        </div>
+        <div class="wheel-shadow bottom">&nbsp;</div>
+    </div><!-- / #wheel-wrapper -->
+    <div class="lights">
+        <span class="lit">&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+    </div>
+
+    <div id="btn-container">
+        <div id="spinBtn"></div>
+        <div class="spin-btn-shadow">&nbsp;</div>
+    </div>
+
+</div>
+
+<script src="js/jquery-1.8.0.min.js"></script>
+<script src="js/jquery-ui.custom.min.js"></script>
+<script>
+
+$.ajax({
+    type: "GET",
+    cache: false,
+    url: 'prize-wheel-prize.json',
+    beforeSend: function(x) {
+        if(x && x.overrideMimeType) {
+            x.overrideMimeType("application/j-son;charset=UTF-8");
+        }
+    },
+    dataType: "json",
+    success: function( data ){
+        var $awards = $( '.award' ),
+            len = $awards.length;
+
+        // should only be one prize in the JSON data object
+        $('.winner').attr('src', data.prize.imgURL);
+
+        // populate the awards
+        $( '.award' ).each( function( index ){
+            var html = '<p class="value">' + data.awards[index].value + '</p>';
+            html += '<p class="value-label">' + data.awards[index].label + '</p>';
+            $( this ).append( html );
+        });
+    }
+});
+
+</script>
+
+<!-- plinko.js must come last -->
+<script src="js/prize-wheel.js"></script>
+
+</body>
+</html>
