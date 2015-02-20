@@ -17,11 +17,13 @@
      }
 
     .page-home & {
+        padding-bottom: 0;
         .content{
             padding: 150px 165px 0;
             text-align: center;
             @include breakpoint( tiny-bear ) {
                 padding: 30px;
+                background: rgba( 0, 0, 0, .2);
             }
         }
         h1{

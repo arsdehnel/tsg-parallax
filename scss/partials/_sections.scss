@@ -1,7 +1,9 @@
 section{
     height: 600px;
-    @include breakpoint( baby-bear ) {
+    @media screen and (max-width: 959px) {
         height: auto;
+    }
+    @media screen and (min-width: 600px) and (max-width: 959px) {
         padding-bottom: 30px;
     }
     &.section-teal{
@@ -13,9 +15,9 @@ section{
         width: 960px;
         margin: 0 auto;
         height: 100%;
-        @include breakpoint( baby-bear ){
+        @media screen and (max-width: 959px){
             width: 100%;
-            padding: 0 20px;
+            padding: 0 20px 20px;
         }
     }
     &.section-large{

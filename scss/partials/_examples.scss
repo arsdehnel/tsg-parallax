@@ -20,14 +20,16 @@
         padding: 80px 25px;
     }
     @include breakpoint( tiny-bear ){
-        padding: 30px 10px;
+        padding: 30px 15px;
     }
     article{
         position: relative;
         width: 990px;
         margin: 0 auto;
-        min-height: 300px;
         padding-left: 300px;
+        @media screen and (min-width: 600px) {
+            min-height: 300px;
+        }
         @include breakpoint( baby-bear ){
             width: 100%;
         }
@@ -40,16 +42,14 @@
             top: 0;
             left: 0;
             height: 270px;
-            width: 270px;
             @include breakpoint( tiny-bear ) {
-                width: 100px;
                 height: 100px;
                 position: relative;
                 float: left;
                 margin-right: 10px;
             }
         }
-        &.example-circle {
+        .example-circle {
             border-radius: 100%;
             border: 10px solid #cbcbcb;
             @include breakpoint( tiny-bear ) {
@@ -63,7 +63,7 @@
         }
         p{
             font-size: 1.25em;
-            margin: 1em 0;
+            margin: 1em 0 0;
         }
         .read-more{
             font-size: 1em;

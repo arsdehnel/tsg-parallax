@@ -68,8 +68,7 @@ module.exports = function(grunt) {
     sass: {
         dev: {
             options: {
-                style: 'expanded',
-                require: "sass-globbing"
+                style: 'expanded'
             },
             files: {
                 'css/base/main.css': 'scss/main.scss'
