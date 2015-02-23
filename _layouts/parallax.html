@@ -1,0 +1,59 @@
+{% include head.html %}
+<body class="page-{{ page.pagename }}">
+    {% if page.navbar %}
+        <header class="subpage-header">
+            <div class="content">
+                <h1>TSG <span class="fancy">Creative</span></h1>
+                <nav class="nav-main">
+                    <a href="index.html">
+                        <svg viewBox="0 0 100 100" class="icon">
+                            <use xlink:href="svg/defs.svg#icon-home"></use>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="games.html" {% if page.pagename == 'games' %} class="active" {% endif %}>
+                        <svg viewBox="0 0 100 100" class="icon">
+                            <use xlink:href="svg/defs.svg#icon-game-controller"></use>
+                        </svg>
+                        <span>Games</span>
+                    </a>
+                    <a href="dataviz.html" {% if page.pagename == 'dataviz' %} class="active" {% endif %}>
+                        <svg viewBox="0 0 100 100" class="icon">
+                            <use xlink:href="svg/defs.svg#icon-bars"></use>
+                        </svg>
+                        <span>Data Visualization</span>
+                    </a>
+                    <a href="dashboards.html" {% if page.pagename == 'dashboards' %} class="active" {% endif %}>
+                        <svg viewBox="0 0 100 100" class="icon">
+                            <use xlink:href="svg/defs.svg#icon-meter"></use>
+                        </svg>
+                        <span>Dashboards</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
+    {% endif %}
+    <div class="parallax">
+        <div class="parallax-layer parallax-layer-background">
+            {% for section in page.parallax_sections %}
+                <section id="{{ section.id }}-background" class="section-{{ section.id }} {{ section.class }}"></section>
+            {% endfor %}
+        </div>
+        <div class="parallax-layer parallax-layer-content">
+          {{ content }}
+          {% include footer.html %}
+        </div><!-- /.parallax-layer.parallax-layer-content -->
+    </div><!-- /.parallax -->
+    {% bundle %} [js/jquery.flexslider.js, js/jquery.numberSpinUp.js, js/main.js] {% endbundle %}
+    <div class="modal-overlay hide"></div>
+    <div class="modal-window hide">
+        <button type="button" class="modal-close hide">
+            <svg viewBox="0 0 52 52" class="icon">
+                <use xlink:href="svg/defs.svg#icon-modal-close"></use>
+            </svg>
+        </button>
+        <div class="loading-indicator"></div>
+        <div class="modal-body"></div>
+    </div>
+</body>
+</html>

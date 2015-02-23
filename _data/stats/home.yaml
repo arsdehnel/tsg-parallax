@@ -1,0 +1,17 @@
+- icon_name   : icon-check-circled
+  stat_value  : 2242
+  stat_label  : 'Basecamp To-dos<br>Completed'
+
+- icon_name   : icon-rocket
+  stat_value  : 78
+  stat_label  : 'websites<br>launched'
+
+- icon_name   : icon-heads
+  stat_value  : 210
+  stat_label  : 'clients<br>served'
+
+- icon_name   : icon-coffee
+  stat_value  : 572
+  start_value : 497
+  duration    : 100000
+  stat_label  : 'cups of<br>coffee'

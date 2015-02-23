@@ -1,237 +1,43 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
-<!--[if IE 7]>         <html class="ie7"> <![endif]-->
-<!--[if IE 8]>         <html class="ie8"> <![endif]-->
-<!--[if IE 9]>         <html class="ie9"> <![endif]-->
-<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
-<head>
-    <script src="js/modernizr.dev.js"></script>
-    <title>TSG Creative and Front End Development :: Games</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/jquery-2.1.1.min.js"></script>
-</head>
-<body class="page-games">
-    <header class="subpage-header">
-        <div class="content">
-            <h1>TSG <span class="fancy">Creative</span></h1>
-            <nav class="nav-main">
-                <a href="index.html">
-                    <svg viewBox="0 0 100 100" class="icon">
-                        <use xlink:href="svg/defs.svg#icon-home"></use>
-                    </svg>
-                    <span>Home</span>
-                </a>
-                <a href="games.html" class="active">
-                    <svg viewBox="0 0 100 100" class="icon">
-                        <use xlink:href="svg/defs.svg#icon-game-controller"></use>
-                    </svg>
-                    <span>Games</span>
-                </a>
-                <a href="dataviz.html">
-                    <svg viewBox="0 0 100 100" class="icon">
-                        <use xlink:href="svg/defs.svg#icon-bars"></use>
-                    </svg>
-                    <span>Data Visualization</span>
-                </a>
-                <a href="dashboards.html">
-                    <svg viewBox="0 0 100 100" class="icon">
-                        <use xlink:href="svg/defs.svg#icon-meter"></use>
-                    </svg>
-                    <span>Dashboards</span>
-                </a>
-            </nav>
+---
+layout            : parallax
+navbar            : true
+pagename          : games
+parallax_sections :
+  - id    : welcome
+    class : section-large
+---
+
+<section id="welcome" class="section-welcome scroll-background-image section-large">
+    <div class="content">
+        <h1>Games</h1>
+        <p class="divider"><span></span></p>
+        <h2>Make it fun and they'll engage</h2>
+        <p>Gamification is one of BIW's key strategies. We've been working hard to come up with fun, quick, and easy to play HTML 5 games that work on all devices. See what you think. Add 'em to a sale.</p>
+        <div class="scroll-indicator">
+            <span>scroll</span>
+            <a href="#stats" class="arrow click-scroll">
+                <svg viewBox="0 0 100 100" class="icon">
+                    <use xlink:href="svg/defs.svg#icon-down-arrow"></use>
+                </svg>
+            </a>
+            <span>please</span>
         </div>
-    </header>
-    <div class="parallax">
-        <div class="parallax-layer parallax-layer-background">
-            <section id="welcome-background" class="section-welcome section-large"></section>
-        </div>
-        <div class="parallax-layer parallax-layer-content">
-            <section id="welcome" class="section-welcome scroll-background-image section-large">
-                <div class="content">
-                    <h1>Games</h1>
-                    <p class="divider"><span></span></p>
-                    <h2>Make it fun and they'll engage</h2>
-                    <p>Gamification is one of BIW's key strategies. We've been working hard to come up with fun, quick, and easy to play HTML 5 games that work on all devices. See what you think. Add 'em to a sale.</p>
-                    <div class="scroll-indicator">
-                        <span>scroll</span>
-                        <a href="#stats" class="arrow click-scroll">
-                            <svg viewBox="0 0 100 100" class="icon">
-                                <use xlink:href="svg/defs.svg#icon-down-arrow"></use>
-                            </svg>
-                        </a>
-                        <span>please</span>
-                    </div>
-                </div>
-            </section><!-- /.welcome -->
-            <section id="stats" class="stats scroll-watch">
-                <div class="content">
-                    <h2>Game On</h2>
-                    <div class="grid-wrapper">
-                        <div class="grid-cell-5">
-                            <svg viewBox="0 0 100 100" class="icon">
-                                <use xlink:href="svg/defs.svg#icon-tools"></use>
-                            </svg>
-                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-duration="1000">489</h4>
-                            <p class="stat-label">games<br>played</p>
-                        </div>
-                        <div class="grid-cell-5">
-                            <svg viewBox="0 0 100 100" class="icon">
-                                <use xlink:href="svg/defs.svg#icon-game-controller"></use>
-                            </svg>
-                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-duration="1000" data-spinup-suffix="+">15</h4>
-                            <p class="stat-label">games<br>created</p>
-                        </div>
-                        <div class="grid-cell-5">
-                            <svg viewBox="0 0 100 100" class="icon">
-                                <use xlink:href="svg/defs.svg#icon-heads"></use>
-                            </svg>
-                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-duration="1000">210</h4>
-                            <p class="stat-label">gamers<br>playing</p>
-                        </div>
-                        <div class="grid-cell-5">
-                            <svg viewBox="0 0 100 100" class="icon">
-                                <use xlink:href="svg/defs.svg#icon-clock"></use>
-                            </svg>
-                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-duration="1000">687</h4>
-                            <p class="stat-label">hours<br>played</p>
-                        </div>
-                    </div>
-                </div>
-            </section><!-- /.stats -->
-            <section id="examples" class="section-examples">
-                <div class="example-module alternating">
-                    <a name="plinqo"></a>
-                    <article>
-                        <img src="img/games/plinqo.jpg" class="example-logo example-circle">
-                        <h3>PLINQO</h3>
-                        <p>A cheeky variation on the classic game show game, Plinqo uses some unique "gravity" and "bounce" mechanics plus some nifty graphic design to give participants a little "game of chance" flavor behind their reward.</p>
-                        <p class="read-more"><a href="games/plinqo/plinqo.html" class="btn modal-trigger" data-content-type="iframe" data-iframe-height="724" data-iframe-width="704" target="_blank">play game</a></p>
-                    </article>
-                </div>
-                <div class="example-module alternating">
-                    <a name="prize-wheel"></a>
-                    <article>
-                        <img src="img/games/big-prize-wheel.jpg" class="example-logo example-circle">
-                        <h3>Big Prize Wheel</h3>
-                        <p>Everybody loves to spin THE BIG WHEEL, right? You can just picture the excitement in the audience. Our take on everyone's fave game of chance uses cool 3D graphics and a skinnable interface that's extensible for a variety of clients and audiences.</p>
-                        <p class="read-more"><a href="games/prize-wheel/prize-wheel.html" class="btn modal-trigger" data-content-type="iframe" data-iframe-height="724" data-iframe-width="700" target="_blank">play game</a></p>
-                    </article>
-                </div>
-                <div class="example-module alternating">
-                    <a name="balloon-pop"></a>
-                    <article>
-                        <img src="img/games/balloon-pop.jpg" class="example-logo example-circle">
-                        <h3>Balloon Pop</h3>
-                        <p>Remember how fun it was to pop bubble wrap? This is that, combined with a simple timed skill game. How many balloons can you pop?</p>
-                        <p class="read-more"><a href="games/balloon-pop/balloon-pop.html" class="btn modal-trigger" data-content-type="iframe" data-iframe-height="720" data-iframe-width="700" target="_blank">play game</a></p>
-                    </article>
-                </div>
-                <div class="example-module alternating">
-                    <a name="mountain-climber"></a>
-                    <article>
-                        <img src="img/games/mountain-climber.jpg" class="example-logo example-circle">
-                        <h3>Mountain Climber</h3>
-                        <p>Some hilarious animation and a nifty character design makes this little diversion a blast to play. Watch your wee mountain climber make his way up a mountain over a number of scary obstacles. Can he ascend the peak? How many points will you get at the end?</p>
-                        <p class="read-more"><a href="games/mountain-climber/climber.html" class="btn modal-trigger" data-content-type="iframe" data-iframe-height="720" data-iframe-width="700" target="_blank">play game</a></p>
-                    </article>
-                </div>
-                <div class="example-module alternating">
-                    <a name="slotmachine"></a>
-                    <article>
-                        <img src="img/games/slot-machine.jpg" height="270" width="270" class="example-logo example-circle">
-                        <h3>Slot Machine</h3>
-                        <p>Classic Vegas action! Pull and play and relive the thrills of the casino floor. Authentic sound and animation plus the old-fashioned "Western" styling make this one a much-revisited classic. And it can be styled for just about any client!</p>
-                        <p class="read-more"><a href="games/slot-machine/slotmachine.html" class="btn modal-trigger" data-content-type="iframe" data-iframe-height="440" data-iframe-width="770" target="_blank">play game</a></p>
-                    </article>
-                </div>
-                <div class="example-module alternating">
-                    <a name="skeeball"></a>
-                    <article>
-                        <img src="img/games/skeeball.png" class="example-logo example-circle">
-                        <h3>Skeeball</h3>
-                        <p>Sure to bring back memories of evenings spent at your local game emporium / pizza parlor. Except in this case, you're not earning a stuffed teddy bear or bucket of popcorn. Instead you get points, exchangeable for our catalog of goodies.</p>
-                        <p class="read-more"><a href="games/skeeball/index.html" class="btn modal-trigger" data-content-type="iframe" data-iframe-height="720" data-iframe-width="700" target="_blank">play game</a></p>
-                    </article>
-                </div>
-                <div class="example-module alternating">
-                    <a name="rocket"></a>
-                    <article>
-                        <img src="img/games/rocket-launch.jpg" class="example-logo example-circle">
-                        <h3>Rocket Launch</h3>
-                        <p>For clients who don't like any chance with their game play. Select a rocket and watch it take off into the stratosphere, revealing your winning points at the end. Fun animation and nifty graphics make this game stellar.</p>
-                        <p class="read-more"><a href="games/rocket/game.html" class="btn modal-trigger" data-content-type="iframe" data-iframe-height="668" data-iframe-width="881" target="_blank">play game</a></p>
-                    </article>
-                </div>
-                <div class="example-module alternating">
-                    <a name="punch-perq"></a>
-                    <article>
-                        <img src="img/games/punch-perq.jpg" class="example-logo example-circle">
-                        <h3>Punch a PerQ</h3>
-                        <p>Take a swing at our fun boxing game. Maneuver your boxing glove into place and WHACK the "PerqPoints" bubbles to see how many points you can earn. But hurry, a timer is counting down the seconds until the prize reveal!</p>
-                        <p class="read-more"><a href="games/punch-perq/punch-perq.html" class="btn modal-trigger" data-content-type="iframe" data-iframe-height="720" data-iframe-width="700" target="_blank">play game</a></p>
-                    </article>
-                </div>
-                <div class="example-module alternating">
-                    <a name="potw"></a>
-                    <article>
-                        <img src="img/games/pirates-warehouse.jpg" class="example-logo example-circle">
-                        <h3>Pirates of the Warehouse</h3>
-                        <p>Ahoy, matey! Pick your pirate booty and a mysterious chest will squeak open to reveal your prize. Great graphics that will remind you of your favorite pirate movie.</p>
-                        <p class="read-more"><a href="games/potw/mock_potwgame_modal.html" class="btn modal-trigger" data-content-type="iframe" data-iframe-height="740" data-iframe-width="987" target="_blank">play game</a></p>
-                    </article>
-                </div>
-            </section><!-- /.section-examples -->
-            <section id="footer" class="section-footer">
-                <div class="content">
-                    <h2 class="scroll-watch">Contact Us Anytime &ndash; We'll Be Here<span class="animated-ellipsis-dot animated-ellipsis-dot-1">.</span><span class="animated-ellipsis-dot animated-ellipsis-dot-2">.</span><span class="animated-ellipsis-dot animated-ellipsis-dot-3">.</span>  </h2>
-                    <div class="grid-wrapper grid-pad-30">
-                        <div class="grid-cell-6 footer-item scroll-watch">
-                            <div>
-                                <svg viewBox="0 0 100 100" class="icon">
-                                    <use xlink:href="svg/defs.svg#icon-email"></use>
-                                </svg>
-                            </div>
-                            <h4>Email</h4>
-                            <p>tsgcreativeteam@biworldwide.com</p>
-                        </div>
-                        <div class="grid-cell-1">&nbsp;</div>
-                        <div class="grid-cell-6 footer-item scroll-watch">
-                            <div>
-                                <svg viewBox="0 0 100 100" class="icon">
-                                    <use xlink:href="svg/defs.svg#icon-phone"></use>
-                                </svg>
-                            </div>
-                            <h4>Phone</h4>
-                            <p>952.844.4364</p>
-                        </div>
-                        <div class="grid-cell-1">&nbsp;</div>
-                        <div class="grid-cell-6 footer-item scroll-watch">
-                            <div>
-                                <svg viewBox="0 0 100 100" class="icon">
-                                    <use xlink:href="svg/defs.svg#icon-pin-1"></use>
-                                </svg>
-                            </div>
-                            <h4>Location</h4>
-                            <p>Bldg 2, Edina</p>
-                        </div>
-                    </div>
-                </div>
-            </section><!-- /.footer -->
-        </div><!-- /.parallax-layer.parallax-layer-content -->
-    </div><!-- /.parallax -->
-    <script src="js/main.min.js"></script>
-    <div class="modal-overlay hide"></div>
-    <div class="modal-window hide">
-        <button type="button" class="modal-close hide">
-            <svg viewBox="0 0 52 52" class="icon">
-                <use xlink:href="svg/defs.svg#icon-modal-close"></use>
-            </svg>
-        </button>
-        <div class="loading-indicator"></div>
-        <div class="modal-body"></div>
     </div>
-</body>
-</html>
+</section><!-- /.welcome -->
+<section id="stats" class="stats scroll-watch">
+    <a name="stats"></a>
+    <div class="content">
+        <h2>Game On</h2>
+        <div class="grid-wrapper">
+            {% for stat in site.data.stats.games %}
+                {% include stat.html %}
+            {% endfor %}
+        </div>
+    </div>
+</section><!-- /.stats -->
+<section id="examples" class="section-examples">
+    {% assign games = site.games | sort: 'order_value' %}
+    {% for game in games %}
+        {% include game.html gameId=forloop.index %}
+    {% endfor %}
+</section><!-- /.section-examples -->

@@ -1,0 +1,20 @@
+- icon_name      : icon-pin-1
+  stat_value     : 10.5
+  stat_label     : 'projects<br>completed'
+  stat_precision : 1
+  stat_suffix    : 'm'
+
+- icon_name      : icon-gauge
+  stat_value     : 825
+  stat_label     : 'people<br>tracked'
+  stat_suffix    : 'k'
+
+- icon_name      : icon-pin-2
+  stat_value     : 314
+  stat_label     : 'locations<br>mapped'
+
+- icon_name      : icon-stopwatch
+  stat_value     : 24.2
+  stat_label     : 'hours<br>logged'
+  stat_precision : 1
+  stat_suffix    : 'k'

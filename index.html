@@ -1,25 +1,13 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
-<!--[if IE 7]>         <html class="ie7"> <![endif]-->
-<!--[if IE 8]>         <html class="ie8"> <![endif]-->
-<!--[if IE 9]>         <html class="ie9"> <![endif]-->
-<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
-<head>
-    <script src="js/modernizr.dev.js"></script>
-    <title>TSG Creative and Front End Development</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/jquery-2.1.1.min.js"></script>
-</head>
-<body class="page-home">
-    <?php include_once("svg/defs.svg"); ?>
-    <div class="parallax">
-        <div class="parallax-layer parallax-layer-background">
-            <section id="welcome-background" class="section-welcome section-large"></section>
-            <section id="we-help-background" class="section-we-help"></section>
-        </div>
-        <div class="parallax-layer parallax-layer-content">
+---
+layout            : parallax
+navbar            : false
+pagename          : home
+parallax_sections :
+  - id    : welcome
+    class : section-large
+  - id    : we-help
+---
+
             <section id="welcome" class="section-welcome section-large">
                 <div class="content">
                     <div class="welcome-animation">
@@ -313,15 +301,6 @@
                 <a name="case-studies"></a>
                 <div class="flexslider">
                     <ul class="slides">
-<!--                         <li class="case-study-1">
-                            <div class="content article-right">
-                                <h2>Something Cool We Did</h2>
-                                <h3>The Verizon Wireless App</h3>
-                                <p class="divider"><span></span></p>
-                                <p>Fully customized responsive web design "Engagement Engine" leverages principals from Behavioral Economics and Gamifcation. Some components include leaderboards, achievement badges, performance dashboards, and real-time coaching tools.</p>
-                                <p class="read-more"><a href="img/case-studies/case-study-1-modal-lg.jpg" class="btn modal-trigger" data-content-type="image">view</a></p>
-                            </div>
-                        </li> -->
                         <li class="case-study-2">
                             <div class="content">
                                 <h2>Product Enhancement</h2>
@@ -356,34 +335,9 @@
                 <div class="content">
                     <h2>Jan - November 2014</h2>
                     <div class="grid-wrapper">
-                        <div class="grid-cell-5">
-                            <svg viewBox="0 0 100 100" class="icon">
-                                <use xlink:href="svg/defs.svg#icon-check-circled"></use>
-                            </svg>
-                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-duration="1000">2242</h4>
-                            <p class="stat-label">Basecamp To-dos<br>Completed</p>
-                        </div>
-                        <div class="grid-cell-5">
-                            <svg viewBox="0 0 100 100" class="icon">
-                                <use xlink:href="svg/defs.svg#icon-rocket"></use>
-                            </svg>
-                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-duration="1000">78</h4>
-                            <p class="stat-label">websites<br>launched</p>
-                        </div>
-                        <div class="grid-cell-5">
-                            <svg viewBox="0 0 100 100" class="icon">
-                                <use xlink:href="svg/defs.svg#icon-heads"></use>
-                            </svg>
-                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-duration="1000">210</h4>
-                            <p class="stat-label">clients<br>served</p>
-                        </div>
-                        <div class="grid-cell-5">
-                            <svg viewBox="0 0 100 100" class="icon">
-                                <use xlink:href="svg/defs.svg#icon-coffee"></use>
-                            </svg>
-                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-start-value="497" data-spinup-duration="100000">572</h4>
-                            <p class="stat-label">cups of<br>coffee</p>
-                        </div>
+                        {% for stat in site.data.stats.home %}
+                            {% include stat.html %}
+                        {% endfor %}
                     </div>
                 </div>
             </section><!-- /.stats -->
@@ -420,54 +374,3 @@
                     </ul>
                 </div>
             </section><!-- /.examples -->
-            <section id="footer" class="section-footer">
-                <div class="content">
-                    <h2 class="scroll-watch">Contact Us Anytime &ndash; We'll Be Here<span class="animated-ellipsis-dot animated-ellipsis-dot-1">.</span><span class="animated-ellipsis-dot animated-ellipsis-dot-2">.</span><span class="animated-ellipsis-dot animated-ellipsis-dot-3">.</span>  </h2>
-                    <div class="grid-wrapper grid-pad-30">
-                        <div class="grid-cell-6 footer-item scroll-watch">
-                            <div>
-                                <svg viewBox="0 0 100 100" class="icon">
-                                    <use xlink:href="svg/defs.svg#icon-email"></use>
-                                </svg>
-                            </div>
-                            <h4>Email</h4>
-                            <p>tsgcreativeteam@biworldwide.com</p>
-                        </div>
-                        <div class="grid-cell-1">&nbsp;</div>
-                        <div class="grid-cell-6 footer-item scroll-watch">
-                            <div>
-                                <svg viewBox="0 0 100 100" class="icon">
-                                    <use xlink:href="svg/defs.svg#icon-phone"></use>
-                                </svg>
-                            </div>
-                            <h4>Phone</h4>
-                            <p>952.844.4364</p>
-                        </div>
-                        <div class="grid-cell-1">&nbsp;</div>
-                        <div class="grid-cell-6 footer-item scroll-watch">
-                            <div>
-                                <svg viewBox="0 0 100 100" class="icon">
-                                    <use xlink:href="svg/defs.svg#icon-pin-1"></use>
-                                </svg>
-                            </div>
-                            <h4>Location</h4>
-                            <p>Bldg 2, Edina</p>
-                        </div>
-                    </div>
-                </div>
-            </section><!-- /.footer -->
-        </div><!-- /.parallax-layer.parallax-layer-content -->
-    </div><!-- /.parallax -->
-    <script src="js/main.min.js"></script>
-    <div class="modal-overlay hide"></div>
-    <div class="modal-window hide">
-        <button type="button" class="modal-close hide">
-            <svg viewBox="0 0 52 52" class="icon">
-                <use xlink:href="svg/defs.svg#icon-modal-close"></use>
-            </svg>
-        </button>
-        <div class="loading-indicator"></div>
-        <div class="modal-body"></div>
-    </div>
-</body>
-</html>

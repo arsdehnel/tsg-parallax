@@ -1,0 +1,9 @@
+<div class="example-module alternating">
+    <a name="{{ game.url_hash }}"></a>
+    <article>
+        <img src="img/games/{{ game.img_filename }}" class="example-logo example-circle">
+        <h3>11{{ game.title }}</h3>
+        <p>{{ game.content }}</p>
+        <p class="read-more"><a href="games/{{ game.launch_path }}" class="btn modal-trigger" data-content-type="iframe" data-iframe-height="{{ game.iframe_height }}" data-iframe-width="{{ game.iframe_height }}" target="_blank">play game</a></p>
+    </article>
+</div>

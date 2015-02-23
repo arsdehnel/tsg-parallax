@@ -1,0 +1,16 @@
+<div class="example-module alternating">
+    <a name="{{ dashboard.url_hash }}"></a>
+    <article>
+        <img src="img/dashboards/dashboard{{ include.dashboardId }}-circle.jpg" class="example-logo example-circle">
+        <h3>{{ dashboard.title }}</h3>
+        <p>{{ dashboard.content }}</p>
+        <p class="read-more"><a href="img/dashboards/dashboard{{ include.dashboardId }}-screenshot1-lg.jpg" class="btn modal-trigger" data-content-type="image">view</a></p>
+    </article>
+    <div class="screenshots">
+        {% for screenshot in dashboard.screenshots %}
+            <a href="img/dashboards/dashboard{{ include.dashboardId }}-screenshot{{ forloop.index }}-lg.jpg" class="framed-{{ screenshot }} modal-trigger" data-content-type="image">
+                <img src="img/dashboards/dashboard{{ include.dashboardId }}-screenshot{{ forloop.index }}.jpg">
+            </a>
+        {% endfor %}
+    </div>
+</div>

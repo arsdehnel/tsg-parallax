@@ -1,244 +1,42 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
-<!--[if IE 7]>         <html class="ie7"> <![endif]-->
-<!--[if IE 8]>         <html class="ie8"> <![endif]-->
-<!--[if IE 9]>         <html class="ie9"> <![endif]-->
-<!--[if gt IE 9]><!--> <html>         <!--<![endif]-->
-<head>
-    <script src="js/modernizr.dev.js"></script>
-    <title>TSG Creative and Front End Development :: Games</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/jquery-2.1.1.min.js"></script>
-</head>
-<body class="page-dashboards">
-    <header class="subpage-header">
-        <div class="content">
-            <h1>TSG <span class="fancy">Creative</span></h1>
-            <nav class="nav-main">
-                <a href="index.html">
-                    <svg viewBox="0 0 100 100" class="icon">
-                        <use xlink:href="svg/defs.svg#icon-home"></use>
-                    </svg>
-                    <span>Home</span>
-                </a>
-                <a href="games.html">
-                    <svg viewBox="0 0 100 100" class="icon">
-                        <use xlink:href="svg/defs.svg#icon-game-controller"></use>
-                    </svg>
-                    <span>Games</span>
-                </a>
-                <a href="dataviz.html">
-                    <svg viewBox="0 0 100 100" class="icon">
-                        <use xlink:href="svg/defs.svg#icon-bars"></use>
-                    </svg>
-                    <span>Data Visualization</span>
-                </a>
-                <a href="dashboards.html" class="active">
-                    <svg viewBox="0 0 100 100" class="icon">
-                        <use xlink:href="svg/defs.svg#icon-meter"></use>
-                    </svg>
-                    <span>Dashboards</span>
-                </a>
-            </nav>
+---
+layout            : parallax
+navbar            : true
+pagename          : dashboards
+parallax_sections :
+  - id    : welcome
+    class : section-large
+---
+
+<section id="welcome" class="section-welcome scroll-background-image section-large">
+    <div class="content">
+        <h1>Dashboards</h1>
+        <p class="divider"><span></span></p>
+        <h2>At your fingertips</h2>
+        <p>Need to show a participant a lot of data? Like a lot lot of data? We have just the answer for you: the dashboard. We can organize your information into an at-a-glance, logical interface that is both easy on the eye and totally cool. Our information architects know the best way to organize everything. And our team of graphic designers know how to polish 'em to make them super shiny.</p>
+        <div class="scroll-indicator">
+            <span>scroll</span>
+            <a href="#stats" class="arrow click-scroll">
+                <svg viewBox="0 0 100 100" class="icon">
+                    <use xlink:href="svg/defs.svg#icon-down-arrow"></use>
+                </svg>
+            </a>
+            <span>please</span>
         </div>
-    </header>
-    <div class="parallax">
-        <div class="parallax-layer parallax-layer-background">
-            <section id="welcome-background" class="section-welcome section-large"></section>
-        </div>
-        <div class="parallax-layer parallax-layer-content">
-            <section id="welcome" class="section-welcome scroll-background-image section-large">
-                <div class="content">
-                    <h1>Dashboards</h1>
-                    <p class="divider"><span></span></p>
-                    <h2>At your fingertips</h2>
-                    <p>Need to show a participant a lot of data? Like a lot lot of data? We have just the answer for you: the dashboard. We can organize your information into an at-a-glance, logical interface that is both easy on the eye and totally cool. Our information architects know the best way to organize everything. And our team of graphic designers know how to polish 'em to make them super shiny.</p>
-                    <div class="scroll-indicator">
-                        <span>scroll</span>
-                        <a href="#stats" class="arrow click-scroll">
-                            <svg viewBox="0 0 100 100" class="icon">
-                                <use xlink:href="svg/defs.svg#icon-down-arrow"></use>
-                            </svg>
-                        </a>
-                        <span>please</span>
-                    </div>
-                </div>
-            </section><!-- /.welcome -->
-            <section id="stats" class="stats scroll-watch">
-                <a name="stats"></a>
-                <div class="content">
-                    <h2>So Many Spinny Things</h2>
-                    <div class="grid-wrapper">
-                        <div class="grid-cell-5">
-                            <svg viewBox="0 0 100 100" class="icon">
-                                <use xlink:href="svg/defs.svg#icon-pin-1"></use>
-                            </svg>
-                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-duration="1000" data-spinup-precision="1" data-spinup-suffix="m">10.5</h4>
-                            <p class="stat-label">projects<br>completed</p>
-                        </div>
-                        <div class="grid-cell-5">
-                            <svg viewBox="0 0 100 100" class="icon">
-                                <use xlink:href="svg/defs.svg#icon-gauge"></use>
-                            </svg>
-                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-duration="1000" data-spinup-suffix="k">825</h4>
-                            <p class="stat-label">people<br>tracked</p>
-                        </div>
-                        <div class="grid-cell-5">
-                            <svg viewBox="0 0 100 100" class="icon">
-                                <use xlink:href="svg/defs.svg#icon-pin-2"></use>
-                            </svg>
-                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-duration="1000">314</h4>
-                            <p class="stat-label">locations<br>mapped</p>
-                        </div>
-                        <div class="grid-cell-5">
-                            <svg viewBox="0 0 100 100" class="icon">
-                                <use xlink:href="svg/defs.svg#icon-stopwatch"></use>
-                            </svg>
-                            <h4 class="stat-value jq-spinup scroll-watch" data-spinup-easing="linear" data-spinup-duration="1000" data-spinup-precision="1" data-spinup-suffix="k">24.2</h4>
-                            <p class="stat-label">hours<br>logged</p>
-                        </div>
-                    </div>
-                </div>
-            </section><!-- /.stats -->
-            <section id="examples" class="section-examples articles">
-                <a name="examples"></a>
-                <div class="example-module alternating">
-                    <a name="example-1"></a>
-                    <article>
-                        <img src="img/dashboards/dashboard1-circle.jpg" class="example-logo example-circle">
-                        <h3>Tablet Dashboard</h3>
-                        <p>We design almost everything mobile-first these days. What does that mean? Well, it means that we consider tablet views when we're laying out an interface. If you've got a client with tons of mobile and tablet participants, they'll get the same experience (or an even better one) than the classic desktop pax. Plus, we can make everything totally scalable and responsive so it'll work on phones as well.</p>
-                        <p class="read-more"><a href="img/dashboards/dashboard1-screenshot1-lg.jpg" class="btn modal-trigger" data-content-type="image">view</a></p>
-                    </article>
-                    <div class="screenshots">
-                        <a href="img/dashboards/dashboard1-screenshot1-lg.jpg" class="framed-ipad modal-trigger" data-content-type="image">
-                            <img src="img/dashboards/dashboard1-screenshot1.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="example-module alternating">
-                    <a name="example-2"></a>
-                    <article>
-                        <img src="img/dashboards/dashboard2-circle.jpg" class="example-logo example-circle">
-                        <h3>Tablet Dashboard</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptatum laudantium quas, fugit perspiciatis animi, autem veritatis amet dolore maiores velit exercitationem aliquam illo sunt incidunt magnam! Quo aliquam nisi, doloribus ratione quam. Omnis maiores quis iusto id delectus autem.</p>
-                        <p class="read-more"><a href="img/dashboards/dashboard2-screenshot1-lg.jpg" class="btn modal-trigger" data-content-type="image">view</a></p>
-                    </article>
-                    <div class="screenshots">
-                        <a href="img/dashboards/dashboard2-screenshot1-lg.jpg" class="framed-imac modal-trigger" data-content-type="image">
-                            <img src="img/dashboards/dashboard2-screenshot1.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="example-module alternating">
-                    <a name="example-3"></a>
-                    <article>
-                        <img src="img/dashboards/dashboard3-circle.jpg" class="example-logo example-circle">
-                        <h3>Tablet Dashboard</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptatum laudantium quas, fugit perspiciatis animi, autem veritatis amet dolore maiores velit exercitationem aliquam illo sunt incidunt magnam! Quo aliquam nisi, doloribus ratione quam. Omnis maiores quis iusto id delectus autem.</p>
-                        <p class="read-more"><a href="img/dashboards/dashboard3-screenshot1-lg.jpg" class="btn modal-trigger" data-content-type="image">view</a></p>
-                    </article>
-                    <div class="screenshots">
-                        <!-- TODO: get proper resolution versions for all of these "large" versions -->
-                        <a href="img/dashboards/dashboard3-screenshot1-lg.jpg" class="framed-macbookair modal-trigger" data-content-type="image">
-                            <img src="img/dashboards/dashboard3-screenshot1.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="example-module alternating">
-                    <a name="example-4"></a>
-                    <article>
-                        <img src="img/dashboards/dashboard4-circle.jpg" class="example-logo example-circle">
-                        <h3>Tablet Dashboard</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptatum laudantium quas, fugit perspiciatis animi, autem veritatis amet dolore maiores velit exercitationem aliquam illo sunt incidunt magnam! Quo aliquam nisi, doloribus ratione quam. Omnis maiores quis iusto id delectus autem.</p>
-                        <p class="read-more"><a href="img/dashboards/dashboard4-screenshot1-lg.jpg" class="btn modal-trigger" data-content-type="image">view</a></p>
-                    </article>
-                    <div class="screenshots">
-                        <a href="img/dashboards/dashboard4-screenshot1-lg.jpg" class="framed-imac modal-trigger" data-content-type="image">
-                            <img src="img/dashboards/dashboard4-screenshot1.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="example-module alternating">
-                    <a name="example-5"></a>
-                    <article>
-                        <img src="img/dashboards/dashboard5-circle.jpg" class="example-logo example-circle">
-                        <h3>Tablet Dashboard</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptatum laudantium quas, fugit perspiciatis animi, autem veritatis amet dolore maiores velit exercitationem aliquam illo sunt incidunt magnam! Quo aliquam nisi, doloribus ratione quam. Omnis maiores quis iusto id delectus autem.</p>
-                        <p class="read-more"><a href="img/dashboards/dashboard5-screenshot1-lg.jpg" class="btn modal-trigger" data-content-type="image">view</a></p>
-                    </article>
-                    <div class="screenshots">
-                        <a href="img/dashboards/dashboard5-screenshot1-lg.jpg" class="framed-macbookair modal-trigger" data-content-type="image">
-                            <img src="img/dashboards/dashboard5-screenshot1.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="example-module alternating">
-                    <a name="example-6"></a>
-                    <article>
-                        <img src="img/dashboards/dashboard6-circle.jpg" class="example-logo example-circle">
-                        <h3>Tablet Dashboard</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptatum laudantium quas, fugit perspiciatis animi, autem veritatis amet dolore maiores velit exercitationem aliquam illo sunt incidunt magnam! Quo aliquam nisi, doloribus ratione quam. Omnis maiores quis iusto id delectus autem.</p>
-                        <p class="read-more"><a href="img/dashboards/dashboard6-screenshot1-lg.jpg" class="btn modal-trigger" data-content-type="image">view</a></p>
-                    </article>
-                    <div class="screenshots">
-                        <a href="img/dashboards/dashboard6-screenshot1-lg.jpg" class="framed-ipad modal-trigger" data-content-type="image">
-                            <img src="img/dashboards/dashboard6-screenshot1.jpg">
-                        </a>
-                    </div>
-                </div>
-            </section><!-- /.dashboards -->
-            <section id="footer" class="section-footer">
-                <a name="footer"></a>
-                <div class="content">
-                    <h2 class="scroll-watch">Contact Us Anytime &ndash; We'll Be Here<span class="animated-ellipsis-dot animated-ellipsis-dot-1">.</span><span class="animated-ellipsis-dot animated-ellipsis-dot-2">.</span><span class="animated-ellipsis-dot animated-ellipsis-dot-3">.</span>  </h2>
-                    <div class="grid-wrapper grid-pad-30">
-                        <div class="grid-cell-6 footer-item scroll-watch">
-                            <div>
-                                <svg viewBox="0 0 100 100" class="icon">
-                                    <use xlink:href="svg/defs.svg#icon-email"></use>
-                                </svg>
-                            </div>
-                            <h4>Email</h4>
-                            <p>tsgcreativeteam@biworldwide.com</p>
-                        </div>
-                        <div class="grid-cell-1">&nbsp;</div>
-                        <div class="grid-cell-6 footer-item scroll-watch">
-                            <div>
-                                <svg viewBox="0 0 100 100" class="icon">
-                                    <use xlink:href="svg/defs.svg#icon-phone"></use>
-                                </svg>
-                            </div>
-                            <h4>Phone</h4>
-                            <p>952.844.4364</p>
-                        </div>
-                        <div class="grid-cell-1">&nbsp;</div>
-                        <div class="grid-cell-6 footer-item scroll-watch">
-                            <div>
-                                <svg viewBox="0 0 100 100" class="icon">
-                                    <use xlink:href="svg/defs.svg#icon-pin-1"></use>
-                                </svg>
-                            </div>
-                            <h4>Location</h4>
-                            <p>Bldg 2, Edina</p>
-                        </div>
-                    </div>
-                </div>
-            </section><!-- /.footer -->
-        </div><!-- /.parallax-layer.parallax-layer-content -->
-    </div><!-- /.parallax -->
-    <script src="js/main.min.js"></script>
-    <div class="modal-overlay hide"></div>
-    <div class="modal-window hide">
-        <button type="button" class="modal-close hide">
-            <svg viewBox="0 0 52 52" class="icon">
-                <use xlink:href="svg/defs.svg#icon-modal-close"></use>
-            </svg>
-        </button>
-        <div class="loading-indicator"></div>
-        <div class="modal-body"></div>
     </div>
-</body>
-</html>
+</section><!-- /.welcome -->
+<section id="stats" class="stats scroll-watch">
+    <a name="stats"></a>
+    <div class="content">
+        <h2>So Many Spinny Things</h2>
+        <div class="grid-wrapper">
+            {% for stat in site.data.stats.dashboards %}
+                {% include stat.html %}
+            {% endfor %}
+        </div>
+    </div>
+</section><!-- /.stats -->
+<section id="examples" class="section-examples articles">
+    {% for dashboard in site.dashboards %}
+        {% include dashboard.html dashboardId=forloop.index %}
+    {% endfor %}
+</section><!-- /.dashboards -->

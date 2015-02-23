@@ -1,0 +1,16 @@
+- icon_name   : icon-tools
+  stat_value  : 489
+  stat_label  : 'games<br>played'
+
+- icon_name   : icon-game-controller
+  stat_value  : 15
+  stat_label  : 'games<br>created'
+  stat_suffix : '+'
+
+- icon_name   : icon-heads
+  stat_value  : 210
+  stat_label  : 'gamers<br>playing'
+
+- icon_name   : icon-clock
+  stat_value  : 687
+  stat_label  : 'hours<br>played'

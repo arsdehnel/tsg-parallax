@@ -1,0 +1,16 @@
+<div class="grid-cell-5">
+    <svg viewBox="0 0 100 100" class="icon">
+        <use xlink:href="svg/defs.svg#{{ stat.icon_name }}"></use>
+    </svg>
+    <h4 class="stat-value jq-spinup scroll-watch"
+        data-spinup-easing="linear"
+        {% if stat.duration %}data-spinup-duration="{{ stat.duration }}"{% else %}data-spinup-duration="1000"{% endif %}
+        {% if stat.start_value %}data-spinup-start-value="{{ stat.start_value }}"{% endif %}
+        {% if stat.start_value %}data-spinup-precision="{{ stat.stat_precision }}"{% endif %}
+        data-spinup-suffix="{{ stat.stat_suffix }}">
+
+        {{ stat.stat_value }}
+
+    </h4>
+    <p class="stat-label">{{ stat.stat_label }}</p>
+</div>
